@@ -1,0 +1,11 @@
+# 忽略特定的 sqlite 数据库文件
+database.sqlite
+app.db
+
+# 或者直接忽略所有后缀为 .db、.sqlite 的文件
+*.db
+*.sqlite
+*.sqlite3
+
+# 如果数据库存在专门的文件夹中，也可以直接忽略整个文件夹
+/data/
