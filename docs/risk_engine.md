@@ -8,7 +8,9 @@
 ```python
 def calculate_returns(df: pd.DataFrame, price_col: str = 'close', log_returns: bool = True) -> pd.Series
 ```
-- **描述**：根据传入的价格数据计算收益率。为了满足在多期计算中收益率可直接线性相加的特性，系统默认采用**对数收益率**（Log Returns），即 $r_t = \ln(\frac{P_t}{P_{t-1}})$。
+- **描述**：根据传入的价格数据计算收益率。为了满足在多期计算中收益率可直接线性相加的特性，系统默认采用**对数收益率**（Log Returns），即：
+
+$$ r_t = \ln\left(\frac{P_t}{P_{t-1}}\right) $$
 - **机制**：内置空值前向填充机制（`ffill`），并在计算后剔除不可用的起始空值。
 
 ### B. 历史模拟法 VaR & CVaR
@@ -26,7 +28,9 @@ def calculate_ewma_var(returns: pd.Series, confidence_level: float = 0.95, lambd
 - **描述**：指数加权移动平均（Exponentially Weighted Moving Average）能更好地捕捉金融市场的“波动率聚集”现象（Volatility Clustering）。
 - **参数**：
   - `lambda_param`：衰减因子。对于日线数据默认推荐使用 RiskMetrics 的标准 `0.94`；对于高频（如 2H）数据可根据平滑要求调整至 `0.97`。
-- **迭代公式**：$\sigma_t^2 = \lambda \sigma_{t-1}^2 + (1 - \lambda) r_{t-1}^2$
+- **迭代公式**：
+
+$$ \sigma_t^2 = \lambda \sigma_{t-1}^2 + (1 - \lambda) r_{t-1}^2 $$
 - **返回值**：返回当期最新的动态 VaR、最新标准差以及历史的动态波动率时间序列。
 
 ### D. 收益率对齐
