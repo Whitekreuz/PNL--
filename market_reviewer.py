@@ -144,7 +144,7 @@ class MarketReviewer:
         ranks = series.rank(ascending=True, na_option='bottom')
         return (ranks - 1.0) / (n - 1.0) * 100.0
 
-    def calculate_rps(self, periods: list = [20, 60, 120]) -> dict:
+    def calculate_rps(self, periods: list = [20, 60, 120], target_date: str = None) -> dict:
         """
         计算全市场所有单品种（主力连续）以及各板块（持仓加权指数）的 RPS 评分。
         """
@@ -156,6 +156,13 @@ class MarketReviewer:
         # 重塑为宽表：行为日期，列为品种
         pivot_close = df.pivot(index='date', columns='symbol', values='close').ffill()
         
+        if target_date:
+            # 如果提供了目标日期，只保留该日期及之前的数据
+            pivot_close = pivot_close[pivot_close.index <= target_date]
+            
+        if pivot_close.empty:
+            return {}
+            
         symbol_rps_results = {}
         latest_date = pivot_close.index[-1]
         
@@ -189,6 +196,12 @@ class MarketReviewer:
             
         sector_pivot = pd.concat(sec_df_list, axis=1).ffill()
         
+        if target_date:
+            sector_pivot = sector_pivot[sector_pivot.index <= target_date]
+            
+        if sector_pivot.empty:
+            return {'symbol_rps': symbol_rps_df, 'sector_rps': pd.DataFrame()}
+            
         sector_rps_results = {}
         for N in periods:
             returns_N = sector_pivot.pct_change(periods=N)
