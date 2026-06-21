@@ -137,6 +137,40 @@ with tab_market:
             st.dataframe(sector_summary[['sector', 'RPS_20', 'RPS_Change_10d', 'capital_flow', 'flow_ratio_10d']].sort_values(by='RPS_20', ascending=False).style.format({
                 'RPS_20': '{:.1f}', 'RPS_Change_10d': '{:+.1f}', 'capital_flow': '{:,.0f}', 'flow_ratio_10d': '{:.2%}'
             }))
+            
+        # 板块 10日 RPS 历史热力图
+        st.subheader("各大板块近 10 个交易日 RPS 变动热力图")
+        try:
+            sec_df_list_hm = []
+            for sec, s_data in sector_indices.items():
+                s_data = s_data.copy()
+                sec_df_list_hm.append(s_data[[col_name]].rename(columns={col_name: sec}))
+                
+            sector_pivot_hm = pd.concat(sec_df_list_hm, axis=1).ffill().dropna()
+            
+            returns_20_hm = sector_pivot_hm.pct_change(periods=20).dropna()
+            last_10_returns_hm = returns_20_hm.tail(10)
+            
+            ranks_hm = last_10_returns_hm.rank(axis=1, ascending=True)
+            n_sectors_hm = sector_pivot_hm.shape[1]
+            rps_10d_history_hm = (ranks_hm - 1.0) / (n_sectors_hm - 1.0) * 100.0
+            
+            # 转置为 行：板块，列：日期
+            rps_heatmap_df = rps_10d_history_hm.T
+            # 按最新一天的 RPS 降序排列
+            rps_heatmap_df = rps_heatmap_df.sort_values(by=rps_heatmap_df.columns[-1], ascending=False)
+            
+            # 将列名(日期)转换为字符串格式
+            if isinstance(rps_heatmap_df.columns, pd.DatetimeIndex):
+                rps_heatmap_df.columns = rps_heatmap_df.columns.strftime('%Y-%m-%d')
+            else:
+                rps_heatmap_df.columns = [str(c)[:10] for c in rps_heatmap_df.columns]
+                
+            # 渲染带背景色的热力图表格
+            styled_heatmap = rps_heatmap_df.style.background_gradient(cmap='RdYlGn_r', axis=None, vmin=0, vmax=100).format("{:.1f}")
+            st.dataframe(styled_heatmap, use_container_width=True)
+        except Exception as e:
+            st.error(f"热力图渲染失败: {e}")
         
         st.markdown("---")
         
