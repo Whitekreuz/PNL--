@@ -5,11 +5,12 @@ from datetime import datetime
 import sys
 
 # Ensure local imports work regardless of cwd
-sys.path.append(r"d:\datasci\PNL日志")
-from data_fetcher import sync_data
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(BASE_DIR)
+
+from data_fetcher import FuturesDataFetcher
 from market_reviewer import MarketReviewer
 
-BASE_DIR = r"d:\datasci\PNL日志"
 DB_PATH = os.path.join(BASE_DIR, "futures_data.db")
 REPORTS_DIR = os.path.join(BASE_DIR, "reports")
 

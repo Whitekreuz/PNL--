@@ -12,8 +12,8 @@ from market_reviewer import MarketReviewer
 
 # --- 全局配置 ---
 st.set_page_config(page_title="量化交易风控工作台", layout="wide", page_icon="📈")
-DB_PATH = r"d:\datasci\PNL日志\futures_data.db"
-
+import os
+DB_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "futures_data.db")
 # --- 缓存底层数据加载 ---
 @st.cache_resource
 def load_engines():

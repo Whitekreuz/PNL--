@@ -2,7 +2,7 @@ import subprocess
 import os
 import sys
 
-base_dir = r"d:\datasci\PNL日志"
+base_dir = os.path.dirname(os.path.abspath(__file__))
 app_path = os.path.join(base_dir, "app.py")
 python_exe = r"D:\miniconda3\envs\quant\python.exe"
 
