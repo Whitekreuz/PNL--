@@ -66,6 +66,7 @@ with tab_market:
         query_10d = f"SELECT symbol, date, open_interest, settlement FROM kline_daily WHERE is_continuous=1 AND date >= '{t10_date}' ORDER BY symbol, date"
         df_10d = pd.read_sql(query_10d, conn)
         conn.close()
+        df_10d = df_10d[df_10d['symbol'].isin(reviewer._metadata_cache.index)].copy()
         
         df_10d['prev_oi'] = df_10d.groupby('symbol')['open_interest'].shift(1)
         df_10d['delta_oi'] = df_10d['open_interest'] - df_10d['prev_oi']
@@ -180,7 +181,7 @@ with tab_market:
         symbol_rps = rps_res['symbol_rps']
         
         # 合并 RPS 和资金流
-        market_scatter_df = pd.merge(symbol_rps, symbol_flow[['capital_flow', 'delta_oi']], left_index=True, right_index=True)
+        market_scatter_df = pd.merge(symbol_rps, symbol_flow[['capital_flow', 'delta_oi']], left_index=True, right_index=True, how='left')
         
         fig_scatter = px.scatter(
             market_scatter_df.reset_index(), 

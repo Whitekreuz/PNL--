@@ -210,10 +210,11 @@ def update_metadata(db_path=DEFAULT_DB_PATH, min_oi_capital=50000000, min_turnov
     idx = df.groupby('品种代码_upper')['持仓量'].idxmax()
     main_contracts_df = df.loc[idx].copy()
     
-    # Apply Liquidity Filter
+    # Apply Liquidity Filter and exclude monthly average price futures (_F)
     active_main_df = main_contracts_df[
-        (main_contracts_df['沉淀资金'] >= min_oi_capital) | 
-        (main_contracts_df['日成交额'] >= min_turnover)
+        ((main_contracts_df['沉淀资金'] >= min_oi_capital) | 
+         (main_contracts_df['日成交额'] >= min_turnover)) &
+        (~main_contracts_df['品种代码_upper'].str.endswith('_F'))
     ].copy()
     
     print(f"Total listed commodities (excl. CFFEX): {len(main_contracts_df)}, passed liquidity filter: {len(active_main_df)}")
