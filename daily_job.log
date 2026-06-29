@@ -1,2 +1,6 @@
-[2026/06/26 周五 22:52:04.17] Starting daily job... 
-^C
+[2026/06/29 周一 19:39:15.12] Starting daily job... 
+Traceback (most recent call last):
+  File "D:\datasci\PNL_Tracker\daily_job.py", line 11, in <module>
+    from data_fetcher import FuturesDataFetcher
+ImportError: cannot import name 'FuturesDataFetcher' from 'data_fetcher' (D:\datasci\PNL_Tracker\data_fetcher.py)
+[2026/06/29 周一 19:39:30.79] Done. 

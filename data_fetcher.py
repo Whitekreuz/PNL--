@@ -217,6 +217,9 @@ def update_metadata(db_path=DEFAULT_DB_PATH, min_oi_capital=50000000, min_turnov
         (~main_contracts_df['品种代码_upper'].str.endswith('_F'))
     ].copy()
     
+    # 仅保留在 SECTOR_MAP 中定义过的固定品种，防止未归类的边缘品种（如 FB）被同步进来
+    active_main_df = active_main_df[active_main_df['品种代码_upper'].isin(SECTOR_MAP.keys())].copy()
+    
     print(f"Total listed commodities (excl. CFFEX): {len(main_contracts_df)}, passed liquidity filter: {len(active_main_df)}")
     
     conn = sqlite3.connect(db_path)

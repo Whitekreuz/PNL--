@@ -8,7 +8,7 @@ import sys
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(BASE_DIR)
 
-from data_fetcher import FuturesDataFetcher
+from data_fetcher import sync_data
 from market_reviewer import MarketReviewer
 
 DB_PATH = os.path.join(BASE_DIR, "futures_data.db")
