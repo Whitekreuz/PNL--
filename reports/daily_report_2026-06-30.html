@@ -3,130 +3,391 @@
     <html>
     <head>
     <meta charset="utf-8">
-    <title>市场复盘与强弱分析 - 2026-06-30</title>
+    <title>量化收盘复盘与对冲决策报告 - 2026-06-30</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; padding: 20px; color: #333; background-color: #f9f9fb; }
-        h1 { border-bottom: 2px solid #ddd; padding-bottom: 10px; }
-        h2 { margin-top: 30px; color: #1f3a93; border-left: 4px solid #1f3a93; padding-left: 10px; }
-        .data-table { border-collapse: collapse; width: 100%; margin-top: 10px; background-color: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; }
-        .data-table th, .data-table td { border: 1px solid #eee; padding: 10px; text-align: right; }
-        .data-table th { background-color: #f0f2f5; font-weight: bold; text-align: center; }
-        .flex-container { display: flex; gap: 20px; }
-        .flex-child { flex: 1; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; padding: 30px; color: #333; background-color: #f4f6f9; line-height: 1.6; }
+        h1 { border-bottom: 3px solid #1f3a93; padding-bottom: 12px; color: #1f3a93; margin-top: 0; }
+        h2 { margin-top: 40px; color: #2c3e50; border-left: 5px solid #1f3a93; padding-left: 12px; font-size: 20px; }
+        h3 { margin-top: 10px; color: #34495e; font-size: 16px; }
+        .table-container { overflow-x: auto; margin-top: 15px; background-color: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-radius: 6px; border: 1px solid #eef2f7; }
+        .data-table { border-collapse: collapse; width: 100%; border: none; }
+        .data-table th, .data-table td { border: 1px solid #eef2f7; padding: 12px 15px; text-align: right; font-size: 14px; }
+        .data-table th { background-color: #ebeff5; font-weight: bold; text-align: center; color: #2c3e50; border-bottom: 2px solid #cbd5e1; }
+        .data-table tr:hover { background-color: #f8fafc; }
+        .strategy-card { background-color: #eef5ff; border: 1px solid #bce0fd; border-radius: 8px; padding: 20px; margin-top: 20px; }
+        .strategy-card ul { padding-left: 20px; }
+        .strategy-card li { margin-bottom: 8px; }
+        .sector-card { background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; margin-top: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
     </style>
     </head>
     <body>
-        <h1>📊 市场复盘每日研报 (2026-06-30)</h1>
+        <h1>📊 收盘量化复盘与对冲决策报告 (2026-06-30)</h1>
         
-        <div class="flex-container">
-            <div class="flex-child">
-                <h2>🔥 最强多头榜 Top 10</h2>
-                <style type="text/css">
+        <h2>🛡️ 截面强弱多空对冲交易策略 (Quant Hedge & Pairs Strategy)</h2>
+        
+    <div class="strategy-card">
+        <h3>📊 跨板块强弱对冲建议 (Inter-Sector Hedge - 基于今日 RPS_5)</h3>
+        <p>基于今日<b>短期相对强度 (RPS_5)</b>数据，推荐以下跨板块阿尔法对冲配置以抵御系统性波动风险：</p>
+        <ul>
+            <li><b>多头端 (Long Leg)</b>：买入短期最强板块 <b>新能源</b> 中的龙头商品 <b>LC</b>。</li>
+            <li><b>空头端 (Short Leg)</b>：卖出短期最弱板块 <b>航运轻工</b> 中的领跌商品 <b>EC</b>。</li>
+            <li><b>对冲逻辑</b>：做多短期资金共振最强烈、突破爆发性最好的强动能品种；做空行业基本面下行且短期资金正加速流出的弱势品种。</li>
+        </ul>
+        
+        <h3>🔄 重点活跃板块内强弱配对对冲 (Intra-Sector Pairs - 基于今日 RPS_5)</h3>
+        <p>针对本交易日短期动能最前列的前三大板块，提供板块内的强弱对冲套利组合：</p>
+        <div class="table-container">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>监控板块</th>
+                        <th>多头端 (Long Strong)</th>
+                        <th>空头端 (Short Weak)</th>
+                        <th>配对对冲逻辑</th>
+                    </tr>
+                </thead>
+                <tbody>
+    
+                    <tr>
+                        <td><b>新能源</b></td>
+                        <td><span style="color:red;font-weight:bold;">LC</span> (RPS_5: 98.6)</td>
+                        <td><span style="color:green;font-weight:bold;">SI</span> (RPS_5: 37.7)</td>
+                        <td>做多该板块内短期最强势的 <b>LC</b>，做空最弱势的 <b>SI</b>。套取由于板块内部基本面差异引发的短线估值劈叉利润。</td>
+                    </tr>
+            
+                    <tr>
+                        <td><b>农产品</b></td>
+                        <td><span style="color:red;font-weight:bold;">LH</span> (RPS_5: 100.0)</td>
+                        <td><span style="color:green;font-weight:bold;">NR</span> (RPS_5: 1.4)</td>
+                        <td>做多该板块内短期最强势的 <b>LH</b>，做空最弱势的 <b>NR</b>。套取由于板块内部基本面差异引发的短线估值劈叉利润。</td>
+                    </tr>
+            
+                    <tr>
+                        <td><b>油脂油料</b></td>
+                        <td><span style="color:red;font-weight:bold;">PK</span> (RPS_5: 95.7)</td>
+                        <td><span style="color:green;font-weight:bold;">RM</span> (RPS_5: 29.0)</td>
+                        <td>做多该板块内短期最强势的 <b>PK</b>，做空最弱势的 <b>RM</b>。套取由于板块内部基本面差异引发的短线估值劈叉利润。</td>
+                    </tr>
+            
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+        
+        <h2>🌡️ 全市场各大板块近 10 个交易日 RPS_5 变动热力图</h2>
+        <div class="table-container">
+            <style type="text/css">
+#T_c0409_row0_col0, #T_c0409_row0_col9, #T_c0409_row2_col4, #T_c0409_row2_col5, #T_c0409_row2_col6, #T_c0409_row2_col7, #T_c0409_row2_col8, #T_c0409_row4_col3, #T_c0409_row5_col1, #T_c0409_row5_col2 {
+  background-color: #a50026;
+  color: #f1f1f1;
+}
+#T_c0409_row0_col1, #T_c0409_row1_col4, #T_c0409_row1_col5, #T_c0409_row1_col6, #T_c0409_row1_col8, #T_c0409_row1_col9, #T_c0409_row2_col0, #T_c0409_row3_col7, #T_c0409_row4_col2, #T_c0409_row5_col3 {
+  background-color: #e34933;
+  color: #f1f1f1;
+}
+#T_c0409_row0_col2, #T_c0409_row0_col3, #T_c0409_row0_col6, #T_c0409_row0_col8, #T_c0409_row3_col1, #T_c0409_row6_col4, #T_c0409_row6_col5, #T_c0409_row6_col7, #T_c0409_row6_col9, #T_c0409_row7_col0 {
+  background-color: #39a758;
+  color: #f1f1f1;
+}
+#T_c0409_row0_col4, #T_c0409_row5_col5, #T_c0409_row5_col6, #T_c0409_row5_col7, #T_c0409_row5_col8, #T_c0409_row6_col0, #T_c0409_row6_col1, #T_c0409_row6_col2, #T_c0409_row6_col3, #T_c0409_row7_col9 {
+  background-color: #006837;
+  color: #f1f1f1;
+}
+#T_c0409_row0_col5, #T_c0409_row1_col1, #T_c0409_row1_col3, #T_c0409_row2_col2, #T_c0409_row3_col9, #T_c0409_row4_col0, #T_c0409_row4_col6, #T_c0409_row4_col7, #T_c0409_row7_col4, #T_c0409_row7_col8 {
+  background-color: #fee999;
+  color: #000000;
+}
+#T_c0409_row0_col7, #T_c0409_row3_col2, #T_c0409_row3_col3, #T_c0409_row5_col0, #T_c0409_row5_col4, #T_c0409_row5_col9, #T_c0409_row6_col6, #T_c0409_row6_col8, #T_c0409_row7_col1, #T_c0409_row7_col5 {
+  background-color: #9dd569;
+  color: #000000;
+}
+#T_c0409_row1_col0, #T_c0409_row1_col2, #T_c0409_row1_col7, #T_c0409_row2_col3, #T_c0409_row2_col9, #T_c0409_row3_col6, #T_c0409_row3_col8, #T_c0409_row4_col1, #T_c0409_row4_col4, #T_c0409_row4_col5 {
+  background-color: #fca55d;
+  color: #000000;
+}
+#T_c0409_row2_col1, #T_c0409_row3_col0, #T_c0409_row3_col4, #T_c0409_row3_col5, #T_c0409_row4_col8, #T_c0409_row4_col9, #T_c0409_row7_col2, #T_c0409_row7_col3, #T_c0409_row7_col6, #T_c0409_row7_col7 {
+  background-color: #e3f399;
+  color: #000000;
+}
 </style>
-<table id="T_3f2cb" class="data-table">
+<table id="T_c0409" class="data-table">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_3f2cb_level0_col0" class="col_heading level0 col0" >RPS_20</th>
-      <th id="T_3f2cb_level0_col1" class="col_heading level0 col1" >RPS_Change_10d</th>
-      <th id="T_3f2cb_level0_col2" class="col_heading level0 col2" >Return_20</th>
-      <th id="T_3f2cb_level0_col3" class="col_heading level0 col3" >sector</th>
-    </tr>
-    <tr>
-      <th class="index_name level0" >symbol</th>
-      <th class="blank col0" >&nbsp;</th>
-      <th class="blank col1" >&nbsp;</th>
-      <th class="blank col2" >&nbsp;</th>
-      <th class="blank col3" >&nbsp;</th>
+      <th id="T_c0409_level0_col0" class="col_heading level0 col0" >2026-06-16</th>
+      <th id="T_c0409_level0_col1" class="col_heading level0 col1" >2026-06-17</th>
+      <th id="T_c0409_level0_col2" class="col_heading level0 col2" >2026-06-18</th>
+      <th id="T_c0409_level0_col3" class="col_heading level0 col3" >2026-06-22</th>
+      <th id="T_c0409_level0_col4" class="col_heading level0 col4" >2026-06-23</th>
+      <th id="T_c0409_level0_col5" class="col_heading level0 col5" >2026-06-24</th>
+      <th id="T_c0409_level0_col6" class="col_heading level0 col6" >2026-06-25</th>
+      <th id="T_c0409_level0_col7" class="col_heading level0 col7" >2026-06-26</th>
+      <th id="T_c0409_level0_col8" class="col_heading level0 col8" >2026-06-29</th>
+      <th id="T_c0409_level0_col9" class="col_heading level0 col9" >2026-06-30</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_3f2cb_level0_row0" class="row_heading level0 row0" >LG</th>
-      <td id="T_3f2cb_row0_col0" class="data row0 col0" >100.0</td>
-      <td id="T_3f2cb_row0_col1" class="data row0 col1" >+49.3</td>
-      <td id="T_3f2cb_row0_col2" class="data row0 col2" >4.52%</td>
-      <td id="T_3f2cb_row0_col3" class="data row0 col3" >航运轻工</td>
+      <th id="T_c0409_level0_row0" class="row_heading level0 row0" >新能源</th>
+      <td id="T_c0409_row0_col0" class="data row0 col0" >100.0</td>
+      <td id="T_c0409_row0_col1" class="data row0 col1" >85.7</td>
+      <td id="T_c0409_row0_col2" class="data row0 col2" >14.3</td>
+      <td id="T_c0409_row0_col3" class="data row0 col3" >14.3</td>
+      <td id="T_c0409_row0_col4" class="data row0 col4" >0.0</td>
+      <td id="T_c0409_row0_col5" class="data row0 col5" >57.1</td>
+      <td id="T_c0409_row0_col6" class="data row0 col6" >14.3</td>
+      <td id="T_c0409_row0_col7" class="data row0 col7" >28.6</td>
+      <td id="T_c0409_row0_col8" class="data row0 col8" >14.3</td>
+      <td id="T_c0409_row0_col9" class="data row0 col9" >100.0</td>
     </tr>
     <tr>
-      <th id="T_3f2cb_level0_row1" class="row_heading level0 row1" >PK</th>
-      <td id="T_3f2cb_row1_col0" class="data row1 col0" >98.6</td>
-      <td id="T_3f2cb_row1_col1" class="data row1 col1" >+15.9</td>
-      <td id="T_3f2cb_row1_col2" class="data row1 col2" >4.31%</td>
-      <td id="T_3f2cb_row1_col3" class="data row1 col3" >油脂油料</td>
+      <th id="T_c0409_level0_row1" class="row_heading level0 row1" >农产品</th>
+      <td id="T_c0409_row1_col0" class="data row1 col0" >71.4</td>
+      <td id="T_c0409_row1_col1" class="data row1 col1" >57.1</td>
+      <td id="T_c0409_row1_col2" class="data row1 col2" >71.4</td>
+      <td id="T_c0409_row1_col3" class="data row1 col3" >57.1</td>
+      <td id="T_c0409_row1_col4" class="data row1 col4" >85.7</td>
+      <td id="T_c0409_row1_col5" class="data row1 col5" >85.7</td>
+      <td id="T_c0409_row1_col6" class="data row1 col6" >85.7</td>
+      <td id="T_c0409_row1_col7" class="data row1 col7" >71.4</td>
+      <td id="T_c0409_row1_col8" class="data row1 col8" >85.7</td>
+      <td id="T_c0409_row1_col9" class="data row1 col9" >85.7</td>
     </tr>
     <tr>
-      <th id="T_3f2cb_level0_row2" class="row_heading level0 row2" >AP</th>
-      <td id="T_3f2cb_row2_col0" class="data row2 col0" >97.1</td>
-      <td id="T_3f2cb_row2_col1" class="data row2 col1" >+13.0</td>
-      <td id="T_3f2cb_row2_col2" class="data row2 col2" >3.29%</td>
-      <td id="T_3f2cb_row2_col3" class="data row2 col3" >农产品</td>
+      <th id="T_c0409_level0_row2" class="row_heading level0 row2" >油脂油料</th>
+      <td id="T_c0409_row2_col0" class="data row2 col0" >85.7</td>
+      <td id="T_c0409_row2_col1" class="data row2 col1" >42.9</td>
+      <td id="T_c0409_row2_col2" class="data row2 col2" >57.1</td>
+      <td id="T_c0409_row2_col3" class="data row2 col3" >71.4</td>
+      <td id="T_c0409_row2_col4" class="data row2 col4" >100.0</td>
+      <td id="T_c0409_row2_col5" class="data row2 col5" >100.0</td>
+      <td id="T_c0409_row2_col6" class="data row2 col6" >100.0</td>
+      <td id="T_c0409_row2_col7" class="data row2 col7" >100.0</td>
+      <td id="T_c0409_row2_col8" class="data row2 col8" >100.0</td>
+      <td id="T_c0409_row2_col9" class="data row2 col9" >71.4</td>
     </tr>
     <tr>
-      <th id="T_3f2cb_level0_row3" class="row_heading level0 row3" >B</th>
-      <td id="T_3f2cb_row3_col0" class="data row3 col0" >95.7</td>
-      <td id="T_3f2cb_row3_col1" class="data row3 col1" >+42.0</td>
-      <td id="T_3f2cb_row3_col2" class="data row3 col2" >2.56%</td>
-      <td id="T_3f2cb_row3_col3" class="data row3 col3" >油脂油料</td>
+      <th id="T_c0409_level0_row3" class="row_heading level0 row3" >黑色建材</th>
+      <td id="T_c0409_row3_col0" class="data row3 col0" >42.9</td>
+      <td id="T_c0409_row3_col1" class="data row3 col1" >14.3</td>
+      <td id="T_c0409_row3_col2" class="data row3 col2" >28.6</td>
+      <td id="T_c0409_row3_col3" class="data row3 col3" >28.6</td>
+      <td id="T_c0409_row3_col4" class="data row3 col4" >42.9</td>
+      <td id="T_c0409_row3_col5" class="data row3 col5" >42.9</td>
+      <td id="T_c0409_row3_col6" class="data row3 col6" >71.4</td>
+      <td id="T_c0409_row3_col7" class="data row3 col7" >85.7</td>
+      <td id="T_c0409_row3_col8" class="data row3 col8" >71.4</td>
+      <td id="T_c0409_row3_col9" class="data row3 col9" >57.1</td>
     </tr>
     <tr>
-      <th id="T_3f2cb_level0_row4" class="row_heading level0 row4" >CS</th>
-      <td id="T_3f2cb_row4_col0" class="data row4 col0" >94.2</td>
-      <td id="T_3f2cb_row4_col1" class="data row4 col1" >+23.2</td>
-      <td id="T_3f2cb_row4_col2" class="data row4 col2" >1.97%</td>
-      <td id="T_3f2cb_row4_col3" class="data row4 col3" >农产品</td>
+      <th id="T_c0409_level0_row4" class="row_heading level0 row4" >有色金属</th>
+      <td id="T_c0409_row4_col0" class="data row4 col0" >57.1</td>
+      <td id="T_c0409_row4_col1" class="data row4 col1" >71.4</td>
+      <td id="T_c0409_row4_col2" class="data row4 col2" >85.7</td>
+      <td id="T_c0409_row4_col3" class="data row4 col3" >100.0</td>
+      <td id="T_c0409_row4_col4" class="data row4 col4" >71.4</td>
+      <td id="T_c0409_row4_col5" class="data row4 col5" >71.4</td>
+      <td id="T_c0409_row4_col6" class="data row4 col6" >57.1</td>
+      <td id="T_c0409_row4_col7" class="data row4 col7" >57.1</td>
+      <td id="T_c0409_row4_col8" class="data row4 col8" >42.9</td>
+      <td id="T_c0409_row4_col9" class="data row4 col9" >42.9</td>
     </tr>
     <tr>
-      <th id="T_3f2cb_level0_row5" class="row_heading level0 row5" >LH</th>
-      <td id="T_3f2cb_row5_col0" class="data row5 col0" >92.8</td>
-      <td id="T_3f2cb_row5_col1" class="data row5 col1" >-4.3</td>
-      <td id="T_3f2cb_row5_col2" class="data row5 col2" >1.91%</td>
-      <td id="T_3f2cb_row5_col3" class="data row5 col3" >农产品</td>
+      <th id="T_c0409_level0_row5" class="row_heading level0 row5" >贵金属</th>
+      <td id="T_c0409_row5_col0" class="data row5 col0" >28.6</td>
+      <td id="T_c0409_row5_col1" class="data row5 col1" >100.0</td>
+      <td id="T_c0409_row5_col2" class="data row5 col2" >100.0</td>
+      <td id="T_c0409_row5_col3" class="data row5 col3" >85.7</td>
+      <td id="T_c0409_row5_col4" class="data row5 col4" >28.6</td>
+      <td id="T_c0409_row5_col5" class="data row5 col5" >0.0</td>
+      <td id="T_c0409_row5_col6" class="data row5 col6" >0.0</td>
+      <td id="T_c0409_row5_col7" class="data row5 col7" >0.0</td>
+      <td id="T_c0409_row5_col8" class="data row5 col8" >0.0</td>
+      <td id="T_c0409_row5_col9" class="data row5 col9" >28.6</td>
     </tr>
     <tr>
-      <th id="T_3f2cb_level0_row6" class="row_heading level0 row6" >A</th>
-      <td id="T_3f2cb_row6_col0" class="data row6 col0" >91.3</td>
-      <td id="T_3f2cb_row6_col1" class="data row6 col1" >+26.1</td>
-      <td id="T_3f2cb_row6_col2" class="data row6 col2" >0.87%</td>
-      <td id="T_3f2cb_row6_col3" class="data row6 col3" >油脂油料</td>
+      <th id="T_c0409_level0_row6" class="row_heading level0 row6" >能源化工</th>
+      <td id="T_c0409_row6_col0" class="data row6 col0" >0.0</td>
+      <td id="T_c0409_row6_col1" class="data row6 col1" >0.0</td>
+      <td id="T_c0409_row6_col2" class="data row6 col2" >0.0</td>
+      <td id="T_c0409_row6_col3" class="data row6 col3" >0.0</td>
+      <td id="T_c0409_row6_col4" class="data row6 col4" >14.3</td>
+      <td id="T_c0409_row6_col5" class="data row6 col5" >14.3</td>
+      <td id="T_c0409_row6_col6" class="data row6 col6" >28.6</td>
+      <td id="T_c0409_row6_col7" class="data row6 col7" >14.3</td>
+      <td id="T_c0409_row6_col8" class="data row6 col8" >28.6</td>
+      <td id="T_c0409_row6_col9" class="data row6 col9" >14.3</td>
     </tr>
     <tr>
-      <th id="T_3f2cb_level0_row7" class="row_heading level0 row7" >C</th>
-      <td id="T_3f2cb_row7_col0" class="data row7 col0" >89.9</td>
-      <td id="T_3f2cb_row7_col1" class="data row7 col1" >+31.9</td>
-      <td id="T_3f2cb_row7_col2" class="data row7 col2" >-0.09%</td>
-      <td id="T_3f2cb_row7_col3" class="data row7 col3" >农产品</td>
-    </tr>
-    <tr>
-      <th id="T_3f2cb_level0_row8" class="row_heading level0 row8" >CY</th>
-      <td id="T_3f2cb_row8_col0" class="data row8 col0" >88.4</td>
-      <td id="T_3f2cb_row8_col1" class="data row8 col1" >+21.7</td>
-      <td id="T_3f2cb_row8_col2" class="data row8 col2" >-0.37%</td>
-      <td id="T_3f2cb_row8_col3" class="data row8 col3" >农产品</td>
-    </tr>
-    <tr>
-      <th id="T_3f2cb_level0_row9" class="row_heading level0 row9" >SS</th>
-      <td id="T_3f2cb_row9_col0" class="data row9 col0" >87.0</td>
-      <td id="T_3f2cb_row9_col1" class="data row9 col1" >+8.7</td>
-      <td id="T_3f2cb_row9_col2" class="data row9 col2" >-0.74%</td>
-      <td id="T_3f2cb_row9_col3" class="data row9 col3" >有色金属</td>
+      <th id="T_c0409_level0_row7" class="row_heading level0 row7" >航运轻工</th>
+      <td id="T_c0409_row7_col0" class="data row7 col0" >14.3</td>
+      <td id="T_c0409_row7_col1" class="data row7 col1" >28.6</td>
+      <td id="T_c0409_row7_col2" class="data row7 col2" >42.9</td>
+      <td id="T_c0409_row7_col3" class="data row7 col3" >42.9</td>
+      <td id="T_c0409_row7_col4" class="data row7 col4" >57.1</td>
+      <td id="T_c0409_row7_col5" class="data row7 col5" >28.6</td>
+      <td id="T_c0409_row7_col6" class="data row7 col6" >42.9</td>
+      <td id="T_c0409_row7_col7" class="data row7 col7" >42.9</td>
+      <td id="T_c0409_row7_col8" class="data row7 col8" >57.1</td>
+      <td id="T_c0409_row7_col9" class="data row7 col9" >0.0</td>
     </tr>
   </tbody>
 </table>
 
-            </div>
-            <div class="flex-child">
-                <h2>🧊 最弱空头榜 Top 10</h2>
-                <style type="text/css">
+        </div>
+
+        <h2>🔍 中期市场结构与板块强弱变化研判 (基于中期 RPS_20)</h2>
+        <div class="sector-card" style="background-color: #fffaf0; border-color: #ffe4b5;">
+            <p style="margin: 0; font-size: 15px; color: #b8860b;">目前中期趋势最强（RPS_20 &ge; 70）的领涨板块为：<b>油脂油料, 农产品, 有色金属</b>；在中期动能变化（RPS_20 加速度）上，近期提升最显著的板块为：<b>油脂油料</b> (RPS_20 10天加速 +57.1), <b>新能源</b> (RPS_20 10天加速 +0.0)。 值得注意的是，<b>新能源</b> 板块出现短中期动能背离（RPS_5已攀升至70以上，但中期的RPS_20仍处于50以下），表明这属于<b>新一轮短线资金超跌抢筹或题材爆发</b>的初期阶段，可积极布局短线阿尔法头寸。</p>
+        </div>
+
+        <h2>📈 各大板块强弱与资金流向总览 (按短期 RPS_5 排序)</h2>
+        <div class="table-container">
+            <style type="text/css">
 </style>
-<table id="T_8d749" class="data-table">
+<table id="T_0432d" class="data-table">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_8d749_level0_col0" class="col_heading level0 col0" >RPS_20</th>
-      <th id="T_8d749_level0_col1" class="col_heading level0 col1" >RPS_Change_10d</th>
-      <th id="T_8d749_level0_col2" class="col_heading level0 col2" >Return_20</th>
-      <th id="T_8d749_level0_col3" class="col_heading level0 col3" >sector</th>
+      <th id="T_0432d_level0_col0" class="col_heading level0 col0" >sector</th>
+      <th id="T_0432d_level0_col1" class="col_heading level0 col1" >RPS_1</th>
+      <th id="T_0432d_level0_col2" class="col_heading level0 col2" >RPS_5</th>
+      <th id="T_0432d_level0_col3" class="col_heading level0 col3" >RPS_20</th>
+      <th id="T_0432d_level0_col4" class="col_heading level0 col4" >RPS_5_Change_10d</th>
+      <th id="T_0432d_level0_col5" class="col_heading level0 col5" >Return_1</th>
+      <th id="T_0432d_level0_col6" class="col_heading level0 col6" >Return_5</th>
+      <th id="T_0432d_level0_col7" class="col_heading level0 col7" >Return_20</th>
+      <th id="T_0432d_level0_col8" class="col_heading level0 col8" >capital_flow</th>
+      <th id="T_0432d_level0_col9" class="col_heading level0 col9" >flow_ratio_10d</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_0432d_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_0432d_row0_col0" class="data row0 col0" >新能源</td>
+      <td id="T_0432d_row0_col1" class="data row0 col1" >100.0</td>
+      <td id="T_0432d_row0_col2" class="data row0 col2" >100.0</td>
+      <td id="T_0432d_row0_col3" class="data row0 col3" >28.6</td>
+      <td id="T_0432d_row0_col4" class="data row0 col4" >+0.0</td>
+      <td id="T_0432d_row0_col5" class="data row0 col5" >+4.52%</td>
+      <td id="T_0432d_row0_col6" class="data row0 col6" >+2.50%</td>
+      <td id="T_0432d_row0_col7" class="data row0 col7" >-8.21%</td>
+      <td id="T_0432d_row0_col8" class="data row0 col8" >-7.44 亿</td>
+      <td id="T_0432d_row0_col9" class="data row0 col9" >-0.59%</td>
+    </tr>
+    <tr>
+      <th id="T_0432d_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_0432d_row1_col0" class="data row1 col0" >农产品</td>
+      <td id="T_0432d_row1_col1" class="data row1 col1" >85.7</td>
+      <td id="T_0432d_row1_col2" class="data row1 col2" >85.7</td>
+      <td id="T_0432d_row1_col3" class="data row1 col3" >85.7</td>
+      <td id="T_0432d_row1_col4" class="data row1 col4" >+28.6</td>
+      <td id="T_0432d_row1_col5" class="data row1 col5" >+0.01%</td>
+      <td id="T_0432d_row1_col6" class="data row1 col6" >+0.51%</td>
+      <td id="T_0432d_row1_col7" class="data row1 col7" >-2.52%</td>
+      <td id="T_0432d_row1_col8" class="data row1 col8" >0.57 亿</td>
+      <td id="T_0432d_row1_col9" class="data row1 col9" >0.04%</td>
+    </tr>
+    <tr>
+      <th id="T_0432d_level0_row2" class="row_heading level0 row2" >6</th>
+      <td id="T_0432d_row2_col0" class="data row2 col0" >油脂油料</td>
+      <td id="T_0432d_row2_col1" class="data row2 col1" >14.3</td>
+      <td id="T_0432d_row2_col2" class="data row2 col2" >71.4</td>
+      <td id="T_0432d_row2_col3" class="data row2 col3" >100.0</td>
+      <td id="T_0432d_row2_col4" class="data row2 col4" >+57.1</td>
+      <td id="T_0432d_row2_col5" class="data row2 col5" >-0.85%</td>
+      <td id="T_0432d_row2_col6" class="data row2 col6" >+0.05%</td>
+      <td id="T_0432d_row2_col7" class="data row2 col7" >-2.16%</td>
+      <td id="T_0432d_row2_col8" class="data row2 col8" >-266.18 亿</td>
+      <td id="T_0432d_row2_col9" class="data row2 col9" >-20.92%</td>
+    </tr>
+    <tr>
+      <th id="T_0432d_level0_row3" class="row_heading level0 row3" >4</th>
+      <td id="T_0432d_row3_col0" class="data row3 col0" >黑色建材</td>
+      <td id="T_0432d_row3_col1" class="data row3 col1" >42.9</td>
+      <td id="T_0432d_row3_col2" class="data row3 col2" >57.1</td>
+      <td id="T_0432d_row3_col3" class="data row3 col3" >57.1</td>
+      <td id="T_0432d_row3_col4" class="data row3 col4" >+28.6</td>
+      <td id="T_0432d_row3_col5" class="data row3 col5" >-0.42%</td>
+      <td id="T_0432d_row3_col6" class="data row3 col6" >-0.02%</td>
+      <td id="T_0432d_row3_col7" class="data row3 col7" >-5.22%</td>
+      <td id="T_0432d_row3_col8" class="data row3 col8" >203.08 亿</td>
+      <td id="T_0432d_row3_col9" class="data row3 col9" >15.96%</td>
+    </tr>
+    <tr>
+      <th id="T_0432d_level0_row4" class="row_heading level0 row4" >5</th>
+      <td id="T_0432d_row4_col0" class="data row4 col0" >有色金属</td>
+      <td id="T_0432d_row4_col1" class="data row4 col1" >28.6</td>
+      <td id="T_0432d_row4_col2" class="data row4 col2" >42.9</td>
+      <td id="T_0432d_row4_col3" class="data row4 col3" >71.4</td>
+      <td id="T_0432d_row4_col4" class="data row4 col4" >-42.9</td>
+      <td id="T_0432d_row4_col5" class="data row4 col5" >-0.69%</td>
+      <td id="T_0432d_row4_col6" class="data row4 col6" >-1.70%</td>
+      <td id="T_0432d_row4_col7" class="data row4 col7" >-4.16%</td>
+      <td id="T_0432d_row4_col8" class="data row4 col8" >256.78 亿</td>
+      <td id="T_0432d_row4_col9" class="data row4 col9" >20.18%</td>
+    </tr>
+    <tr>
+      <th id="T_0432d_level0_row5" class="row_heading level0 row5" >3</th>
+      <td id="T_0432d_row5_col0" class="data row5 col0" >贵金属</td>
+      <td id="T_0432d_row5_col1" class="data row5 col1" >57.1</td>
+      <td id="T_0432d_row5_col2" class="data row5 col2" >28.6</td>
+      <td id="T_0432d_row5_col3" class="data row5 col3" >14.3</td>
+      <td id="T_0432d_row5_col4" class="data row5 col4" >-42.9</td>
+      <td id="T_0432d_row5_col5" class="data row5 col5" >-0.38%</td>
+      <td id="T_0432d_row5_col6" class="data row5 col6" >-2.40%</td>
+      <td id="T_0432d_row5_col7" class="data row5 col7" >-13.45%</td>
+      <td id="T_0432d_row5_col8" class="data row5 col8" >-375.72 亿</td>
+      <td id="T_0432d_row5_col9" class="data row5 col9" >-29.53%</td>
+    </tr>
+    <tr>
+      <th id="T_0432d_level0_row6" class="row_heading level0 row6" >2</th>
+      <td id="T_0432d_row6_col0" class="data row6 col0" >能源化工</td>
+      <td id="T_0432d_row6_col1" class="data row6 col1" >71.4</td>
+      <td id="T_0432d_row6_col2" class="data row6 col2" >14.3</td>
+      <td id="T_0432d_row6_col3" class="data row6 col3" >0.0</td>
+      <td id="T_0432d_row6_col4" class="data row6 col4" >+14.3</td>
+      <td id="T_0432d_row6_col5" class="data row6 col5" >-0.18%</td>
+      <td id="T_0432d_row6_col6" class="data row6 col6" >-2.43%</td>
+      <td id="T_0432d_row6_col7" class="data row6 col7" >-13.64%</td>
+      <td id="T_0432d_row6_col8" class="data row6 col8" >161.26 亿</td>
+      <td id="T_0432d_row6_col9" class="data row6 col9" >12.68%</td>
+    </tr>
+    <tr>
+      <th id="T_0432d_level0_row7" class="row_heading level0 row7" >7</th>
+      <td id="T_0432d_row7_col0" class="data row7 col0" >航运轻工</td>
+      <td id="T_0432d_row7_col1" class="data row7 col1" >0.0</td>
+      <td id="T_0432d_row7_col2" class="data row7 col2" >0.0</td>
+      <td id="T_0432d_row7_col3" class="data row7 col3" >42.9</td>
+      <td id="T_0432d_row7_col4" class="data row7 col4" >-42.9</td>
+      <td id="T_0432d_row7_col5" class="data row7 col5" >-3.18%</td>
+      <td id="T_0432d_row7_col6" class="data row7 col6" >-3.85%</td>
+      <td id="T_0432d_row7_col7" class="data row7 col7" >-6.85%</td>
+      <td id="T_0432d_row7_col8" class="data row7 col8" >1.14 亿</td>
+      <td id="T_0432d_row7_col9" class="data row7 col9" >0.09%</td>
+    </tr>
+  </tbody>
+</table>
+
+        </div>
+        
+        <h2>🔥 全市场多头领涨榜 Top 10 (按短期 RPS_5 排序)</h2>
+        <div class="table-container">
+            <style type="text/css">
+</style>
+<table id="T_79f57" class="data-table">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_79f57_level0_col0" class="col_heading level0 col0" >RPS_1</th>
+      <th id="T_79f57_level0_col1" class="col_heading level0 col1" >RPS_5</th>
+      <th id="T_79f57_level0_col2" class="col_heading level0 col2" >RPS_20</th>
+      <th id="T_79f57_level0_col3" class="col_heading level0 col3" >RPS_5_Change_10d</th>
+      <th id="T_79f57_level0_col4" class="col_heading level0 col4" >Return_1</th>
+      <th id="T_79f57_level0_col5" class="col_heading level0 col5" >Return_5</th>
+      <th id="T_79f57_level0_col6" class="col_heading level0 col6" >sector</th>
+      <th id="T_79f57_level0_col7" class="col_heading level0 col7" >capital_flow</th>
     </tr>
     <tr>
       <th class="index_name level0" >symbol</th>
@@ -134,78 +395,333 @@
       <th class="blank col1" >&nbsp;</th>
       <th class="blank col2" >&nbsp;</th>
       <th class="blank col3" >&nbsp;</th>
+      <th class="blank col4" >&nbsp;</th>
+      <th class="blank col5" >&nbsp;</th>
+      <th class="blank col6" >&nbsp;</th>
+      <th class="blank col7" >&nbsp;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_8d749_level0_row0" class="row_heading level0 row0" >EC</th>
-      <td id="T_8d749_row0_col0" class="data row0 col0" >0.0</td>
-      <td id="T_8d749_row0_col1" class="data row0 col1" >-100.0</td>
-      <td id="T_8d749_row0_col2" class="data row0 col2" >-29.80%</td>
-      <td id="T_8d749_row0_col3" class="data row0 col3" >航运轻工</td>
+      <th id="T_79f57_level0_row0" class="row_heading level0 row0" >LH</th>
+      <td id="T_79f57_row0_col0" class="data row0 col0" >23.2</td>
+      <td id="T_79f57_row0_col1" class="data row0 col1" >100.0</td>
+      <td id="T_79f57_row0_col2" class="data row0 col2" >92.8</td>
+      <td id="T_79f57_row0_col3" class="data row0 col3" >+10.1</td>
+      <td id="T_79f57_row0_col4" class="data row0 col4" >-0.97%</td>
+      <td id="T_79f57_row0_col5" class="data row0 col5" >+4.73%</td>
+      <td id="T_79f57_row0_col6" class="data row0 col6" >农产品</td>
+      <td id="T_79f57_row0_col7" class="data row0 col7" >-27,328 万</td>
     </tr>
     <tr>
-      <th id="T_8d749_level0_row1" class="row_heading level0 row1" >FU</th>
-      <td id="T_8d749_row1_col0" class="data row1 col0" >1.4</td>
-      <td id="T_8d749_row1_col1" class="data row1 col1" >-1.4</td>
-      <td id="T_8d749_row1_col2" class="data row1 col2" >-24.59%</td>
-      <td id="T_8d749_row1_col3" class="data row1 col3" >能源化工</td>
+      <th id="T_79f57_level0_row1" class="row_heading level0 row1" >LC</th>
+      <td id="T_79f57_row1_col0" class="data row1 col0" >100.0</td>
+      <td id="T_79f57_row1_col1" class="data row1 col1" >98.6</td>
+      <td id="T_79f57_row1_col2" class="data row1 col2" >36.2</td>
+      <td id="T_79f57_row1_col3" class="data row1 col3" >+1.4</td>
+      <td id="T_79f57_row1_col4" class="data row1 col4" >+6.13%</td>
+      <td id="T_79f57_row1_col5" class="data row1 col5" >+3.91%</td>
+      <td id="T_79f57_row1_col6" class="data row1 col6" >新能源</td>
+      <td id="T_79f57_row1_col7" class="data row1 col7" >-190,836 万</td>
     </tr>
     <tr>
-      <th id="T_8d749_level0_row2" class="row_heading level0 row2" >SC</th>
-      <td id="T_8d749_row2_col0" class="data row2 col0" >2.9</td>
-      <td id="T_8d749_row2_col1" class="data row2 col1" >+2.9</td>
-      <td id="T_8d749_row2_col2" class="data row2 col2" >-22.76%</td>
-      <td id="T_8d749_row2_col3" class="data row2 col3" >能源化工</td>
+      <th id="T_79f57_level0_row2" class="row_heading level0 row2" >JM</th>
+      <td id="T_79f57_row2_col0" class="data row2 col0" >21.7</td>
+      <td id="T_79f57_row2_col1" class="data row2 col1" >97.1</td>
+      <td id="T_79f57_row2_col2" class="data row2 col2" >49.3</td>
+      <td id="T_79f57_row2_col3" class="data row2 col3" >+75.4</td>
+      <td id="T_79f57_row2_col4" class="data row2 col4" >-1.08%</td>
+      <td id="T_79f57_row2_col5" class="data row2 col5" >+2.60%</td>
+      <td id="T_79f57_row2_col6" class="data row2 col6" >黑色建材</td>
+      <td id="T_79f57_row2_col7" class="data row2 col7" >-116,808 万</td>
     </tr>
     <tr>
-      <th id="T_8d749_level0_row3" class="row_heading level0 row3" >AG</th>
-      <td id="T_8d749_row3_col0" class="data row3 col0" >4.3</td>
-      <td id="T_8d749_row3_col1" class="data row3 col1" >-11.6</td>
-      <td id="T_8d749_row3_col2" class="data row3 col2" >-20.63%</td>
-      <td id="T_8d749_row3_col3" class="data row3 col3" >贵金属</td>
+      <th id="T_79f57_level0_row3" class="row_heading level0 row3" >PK</th>
+      <td id="T_79f57_row3_col0" class="data row3 col0" >88.4</td>
+      <td id="T_79f57_row3_col1" class="data row3 col1" >95.7</td>
+      <td id="T_79f57_row3_col2" class="data row3 col2" >98.6</td>
+      <td id="T_79f57_row3_col3" class="data row3 col3" >+39.1</td>
+      <td id="T_79f57_row3_col4" class="data row3 col4" >+0.88%</td>
+      <td id="T_79f57_row3_col5" class="data row3 col5" >+2.60%</td>
+      <td id="T_79f57_row3_col6" class="data row3 col6" >油脂油料</td>
+      <td id="T_79f57_row3_col7" class="data row3 col7" >101,337 万</td>
     </tr>
     <tr>
-      <th id="T_8d749_level0_row4" class="row_heading level0 row4" >PG</th>
-      <td id="T_8d749_row4_col0" class="data row4 col0" >5.8</td>
-      <td id="T_8d749_row4_col1" class="data row4 col1" >+0.0</td>
-      <td id="T_8d749_row4_col2" class="data row4 col2" >-20.61%</td>
-      <td id="T_8d749_row4_col3" class="data row4 col3" >能源化工</td>
+      <th id="T_79f57_level0_row4" class="row_heading level0 row4" >JD</th>
+      <td id="T_79f57_row4_col0" class="data row4 col0" >92.8</td>
+      <td id="T_79f57_row4_col1" class="data row4 col1" >94.2</td>
+      <td id="T_79f57_row4_col2" class="data row4 col2" >40.6</td>
+      <td id="T_79f57_row4_col3" class="data row4 col3" >+11.6</td>
+      <td id="T_79f57_row4_col4" class="data row4 col4" >+1.45%</td>
+      <td id="T_79f57_row4_col5" class="data row4 col5" >+2.44%</td>
+      <td id="T_79f57_row4_col6" class="data row4 col6" >农产品</td>
+      <td id="T_79f57_row4_col7" class="data row4 col7" >-36,839 万</td>
     </tr>
     <tr>
-      <th id="T_8d749_level0_row5" class="row_heading level0 row5" >PL</th>
-      <td id="T_8d749_row5_col0" class="data row5 col0" >7.2</td>
-      <td id="T_8d749_row5_col1" class="data row5 col1" >-4.3</td>
-      <td id="T_8d749_row5_col2" class="data row5 col2" >-18.93%</td>
-      <td id="T_8d749_row5_col3" class="data row5 col3" >能源化工</td>
+      <th id="T_79f57_level0_row5" class="row_heading level0 row5" >LU</th>
+      <td id="T_79f57_row5_col0" class="data row5 col0" >79.7</td>
+      <td id="T_79f57_row5_col1" class="data row5 col1" >92.8</td>
+      <td id="T_79f57_row5_col2" class="data row5 col2" >11.6</td>
+      <td id="T_79f57_row5_col3" class="data row5 col3" >+92.8</td>
+      <td id="T_79f57_row5_col4" class="data row5 col4" >+0.46%</td>
+      <td id="T_79f57_row5_col5" class="data row5 col5" >+2.28%</td>
+      <td id="T_79f57_row5_col6" class="data row5 col6" >能源化工</td>
+      <td id="T_79f57_row5_col7" class="data row5 col7" >-4,011 万</td>
     </tr>
     <tr>
-      <th id="T_8d749_level0_row6" class="row_heading level0 row6" >PT</th>
-      <td id="T_8d749_row6_col0" class="data row6 col0" >8.7</td>
-      <td id="T_8d749_row6_col1" class="data row6 col1" >-5.8</td>
-      <td id="T_8d749_row6_col2" class="data row6 col2" >-18.31%</td>
-      <td id="T_8d749_row6_col3" class="data row6 col3" >贵金属</td>
+      <th id="T_79f57_level0_row6" class="row_heading level0 row6" >AP</th>
+      <td id="T_79f57_row6_col0" class="data row6 col0" >84.1</td>
+      <td id="T_79f57_row6_col1" class="data row6 col1" >91.3</td>
+      <td id="T_79f57_row6_col2" class="data row6 col2" >97.1</td>
+      <td id="T_79f57_row6_col3" class="data row6 col3" >+4.3</td>
+      <td id="T_79f57_row6_col4" class="data row6 col4" >+0.68%</td>
+      <td id="T_79f57_row6_col5" class="data row6 col5" >+1.98%</td>
+      <td id="T_79f57_row6_col6" class="data row6 col6" >农产品</td>
+      <td id="T_79f57_row6_col7" class="data row6 col7" >29,069 万</td>
     </tr>
     <tr>
-      <th id="T_8d749_level0_row7" class="row_heading level0 row7" >BR</th>
-      <td id="T_8d749_row7_col0" class="data row7 col0" >10.1</td>
-      <td id="T_8d749_row7_col1" class="data row7 col1" >+5.8</td>
-      <td id="T_8d749_row7_col2" class="data row7 col2" >-18.26%</td>
-      <td id="T_8d749_row7_col3" class="data row7 col3" >能源化工</td>
+      <th id="T_79f57_level0_row7" class="row_heading level0 row7" >J</th>
+      <td id="T_79f57_row7_col0" class="data row7 col0" >18.8</td>
+      <td id="T_79f57_row7_col1" class="data row7 col1" >89.9</td>
+      <td id="T_79f57_row7_col2" class="data row7 col2" >76.8</td>
+      <td id="T_79f57_row7_col3" class="data row7 col3" >-1.4</td>
+      <td id="T_79f57_row7_col4" class="data row7 col4" >-1.21%</td>
+      <td id="T_79f57_row7_col5" class="data row7 col5" >+1.74%</td>
+      <td id="T_79f57_row7_col6" class="data row7 col6" >黑色建材</td>
+      <td id="T_79f57_row7_col7" class="data row7 col7" >-32,324 万</td>
     </tr>
     <tr>
-      <th id="T_8d749_level0_row8" class="row_heading level0 row8" >LU</th>
-      <td id="T_8d749_row8_col0" class="data row8 col0" >11.6</td>
-      <td id="T_8d749_row8_col1" class="data row8 col1" >+10.1</td>
-      <td id="T_8d749_row8_col2" class="data row8 col2" >-17.21%</td>
-      <td id="T_8d749_row8_col3" class="data row8 col3" >能源化工</td>
+      <th id="T_79f57_level0_row8" class="row_heading level0 row8" >CS</th>
+      <td id="T_79f57_row8_col0" class="data row8 col0" >59.4</td>
+      <td id="T_79f57_row8_col1" class="data row8 col1" >88.4</td>
+      <td id="T_79f57_row8_col2" class="data row8 col2" >94.2</td>
+      <td id="T_79f57_row8_col3" class="data row8 col3" >+50.7</td>
+      <td id="T_79f57_row8_col4" class="data row8 col4" >-0.11%</td>
+      <td id="T_79f57_row8_col5" class="data row8 col5" >+1.63%</td>
+      <td id="T_79f57_row8_col6" class="data row8 col6" >农产品</td>
+      <td id="T_79f57_row8_col7" class="data row8 col7" >49,703 万</td>
     </tr>
     <tr>
-      <th id="T_8d749_level0_row9" class="row_heading level0 row9" >EB</th>
-      <td id="T_8d749_row9_col0" class="data row9 col0" >13.0</td>
-      <td id="T_8d749_row9_col1" class="data row9 col1" >+2.9</td>
-      <td id="T_8d749_row9_col2" class="data row9 col2" >-16.37%</td>
-      <td id="T_8d749_row9_col3" class="data row9 col3" >能源化工</td>
+      <th id="T_79f57_level0_row9" class="row_heading level0 row9" >CJ</th>
+      <td id="T_79f57_row9_col0" class="data row9 col0" >95.7</td>
+      <td id="T_79f57_row9_col1" class="data row9 col1" >87.0</td>
+      <td id="T_79f57_row9_col2" class="data row9 col2" >34.8</td>
+      <td id="T_79f57_row9_col3" class="data row9 col3" >+50.7</td>
+      <td id="T_79f57_row9_col4" class="data row9 col4" >+1.57%</td>
+      <td id="T_79f57_row9_col5" class="data row9 col5" >+1.63%</td>
+      <td id="T_79f57_row9_col6" class="data row9 col6" >农产品</td>
+      <td id="T_79f57_row9_col7" class="data row9 col7" >-36,409 万</td>
+    </tr>
+  </tbody>
+</table>
+
+        </div>
+        
+        <h2>🧊 全市场空头领跌榜 Top 10 (按短期 RPS_5 排序)</h2>
+        <div class="table-container">
+            <style type="text/css">
+</style>
+<table id="T_41d3e" class="data-table">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_41d3e_level0_col0" class="col_heading level0 col0" >RPS_1</th>
+      <th id="T_41d3e_level0_col1" class="col_heading level0 col1" >RPS_5</th>
+      <th id="T_41d3e_level0_col2" class="col_heading level0 col2" >RPS_20</th>
+      <th id="T_41d3e_level0_col3" class="col_heading level0 col3" >RPS_5_Change_10d</th>
+      <th id="T_41d3e_level0_col4" class="col_heading level0 col4" >Return_1</th>
+      <th id="T_41d3e_level0_col5" class="col_heading level0 col5" >Return_5</th>
+      <th id="T_41d3e_level0_col6" class="col_heading level0 col6" >sector</th>
+      <th id="T_41d3e_level0_col7" class="col_heading level0 col7" >capital_flow</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >symbol</th>
+      <th class="blank col0" >&nbsp;</th>
+      <th class="blank col1" >&nbsp;</th>
+      <th class="blank col2" >&nbsp;</th>
+      <th class="blank col3" >&nbsp;</th>
+      <th class="blank col4" >&nbsp;</th>
+      <th class="blank col5" >&nbsp;</th>
+      <th class="blank col6" >&nbsp;</th>
+      <th class="blank col7" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_41d3e_level0_row0" class="row_heading level0 row0" >EC</th>
+      <td id="T_41d3e_row0_col0" class="data row0 col0" >0.0</td>
+      <td id="T_41d3e_row0_col1" class="data row0 col1" >0.0</td>
+      <td id="T_41d3e_row0_col2" class="data row0 col2" >0.0</td>
+      <td id="T_41d3e_row0_col3" class="data row0 col3" >-24.6</td>
+      <td id="T_41d3e_row0_col4" class="data row0 col4" >-26.52%</td>
+      <td id="T_41d3e_row0_col5" class="data row0 col5" >-27.59%</td>
+      <td id="T_41d3e_row0_col6" class="data row0 col6" >航运轻工</td>
+      <td id="T_41d3e_row0_col7" class="data row0 col7" >48,723 万</td>
+    </tr>
+    <tr>
+      <th id="T_41d3e_level0_row1" class="row_heading level0 row1" >NR</th>
+      <td id="T_41d3e_row1_col0" class="data row1 col0" >87.0</td>
+      <td id="T_41d3e_row1_col1" class="data row1 col1" >1.4</td>
+      <td id="T_41d3e_row1_col2" class="data row1 col2" >42.0</td>
+      <td id="T_41d3e_row1_col3" class="data row1 col3" >-50.7</td>
+      <td id="T_41d3e_row1_col4" class="data row1 col4" >+0.87%</td>
+      <td id="T_41d3e_row1_col5" class="data row1 col5" >-7.21%</td>
+      <td id="T_41d3e_row1_col6" class="data row1 col6" >农产品</td>
+      <td id="T_41d3e_row1_col7" class="data row1 col7" >74,057 万</td>
+    </tr>
+    <tr>
+      <th id="T_41d3e_level0_row2" class="row_heading level0 row2" >SC</th>
+      <td id="T_41d3e_row2_col0" class="data row2 col0" >24.6</td>
+      <td id="T_41d3e_row2_col1" class="data row2 col1" >2.9</td>
+      <td id="T_41d3e_row2_col2" class="data row2 col2" >2.9</td>
+      <td id="T_41d3e_row2_col3" class="data row2 col3" >+0.0</td>
+      <td id="T_41d3e_row2_col4" class="data row2 col4" >-0.86%</td>
+      <td id="T_41d3e_row2_col5" class="data row2 col5" >-6.33%</td>
+      <td id="T_41d3e_row2_col6" class="data row2 col6" >能源化工</td>
+      <td id="T_41d3e_row2_col7" class="data row2 col7" >-80,221 万</td>
+    </tr>
+    <tr>
+      <th id="T_41d3e_level0_row3" class="row_heading level0 row3" >RU</th>
+      <td id="T_41d3e_row3_col0" class="data row3 col0" >81.2</td>
+      <td id="T_41d3e_row3_col1" class="data row3 col1" >4.3</td>
+      <td id="T_41d3e_row3_col2" class="data row3 col2" >47.8</td>
+      <td id="T_41d3e_row3_col3" class="data row3 col3" >-69.6</td>
+      <td id="T_41d3e_row3_col4" class="data row3 col4" >+0.54%</td>
+      <td id="T_41d3e_row3_col5" class="data row3 col5" >-5.23%</td>
+      <td id="T_41d3e_row3_col6" class="data row3 col6" >农产品</td>
+      <td id="T_41d3e_row3_col7" class="data row3 col7" >41,854 万</td>
+    </tr>
+    <tr>
+      <th id="T_41d3e_level0_row4" class="row_heading level0 row4" >NI</th>
+      <td id="T_41d3e_row4_col0" class="data row4 col0" >7.2</td>
+      <td id="T_41d3e_row4_col1" class="data row4 col1" >5.8</td>
+      <td id="T_41d3e_row4_col2" class="data row4 col2" >24.6</td>
+      <td id="T_41d3e_row4_col3" class="data row4 col3" >-26.1</td>
+      <td id="T_41d3e_row4_col4" class="data row4 col4" >-1.81%</td>
+      <td id="T_41d3e_row4_col5" class="data row4 col5" >-4.59%</td>
+      <td id="T_41d3e_row4_col6" class="data row4 col6" >有色金属</td>
+      <td id="T_41d3e_row4_col7" class="data row4 col7" >199,083 万</td>
+    </tr>
+    <tr>
+      <th id="T_41d3e_level0_row5" class="row_heading level0 row5" >PR</th>
+      <td id="T_41d3e_row5_col0" class="data row5 col0" >27.5</td>
+      <td id="T_41d3e_row5_col1" class="data row5 col1" >7.2</td>
+      <td id="T_41d3e_row5_col2" class="data row5 col2" >14.5</td>
+      <td id="T_41d3e_row5_col3" class="data row5 col3" >+0.0</td>
+      <td id="T_41d3e_row5_col4" class="data row5 col4" >-0.83%</td>
+      <td id="T_41d3e_row5_col5" class="data row5 col5" >-4.09%</td>
+      <td id="T_41d3e_row5_col6" class="data row5 col6" >能源化工</td>
+      <td id="T_41d3e_row5_col7" class="data row5 col7" >2,188 万</td>
+    </tr>
+    <tr>
+      <th id="T_41d3e_level0_row6" class="row_heading level0 row6" >SA</th>
+      <td id="T_41d3e_row6_col0" class="data row6 col0" >11.6</td>
+      <td id="T_41d3e_row6_col1" class="data row6 col1" >8.7</td>
+      <td id="T_41d3e_row6_col2" class="data row6 col2" >26.1</td>
+      <td id="T_41d3e_row6_col3" class="data row6 col3" >-59.4</td>
+      <td id="T_41d3e_row6_col4" class="data row6 col4" >-1.54%</td>
+      <td id="T_41d3e_row6_col5" class="data row6 col5" >-4.06%</td>
+      <td id="T_41d3e_row6_col6" class="data row6 col6" >黑色建材</td>
+      <td id="T_41d3e_row6_col7" class="data row6 col7" >141,597 万</td>
+    </tr>
+    <tr>
+      <th id="T_41d3e_level0_row7" class="row_heading level0 row7" >AL</th>
+      <td id="T_41d3e_row7_col0" class="data row7 col0" >2.9</td>
+      <td id="T_41d3e_row7_col1" class="data row7 col1" >10.1</td>
+      <td id="T_41d3e_row7_col2" class="data row7 col2" >46.4</td>
+      <td id="T_41d3e_row7_col3" class="data row7 col3" >-47.8</td>
+      <td id="T_41d3e_row7_col4" class="data row7 col4" >-2.25%</td>
+      <td id="T_41d3e_row7_col5" class="data row7 col5" >-4.06%</td>
+      <td id="T_41d3e_row7_col6" class="data row7 col6" >有色金属</td>
+      <td id="T_41d3e_row7_col7" class="data row7 col7" >168,326 万</td>
+    </tr>
+    <tr>
+      <th id="T_41d3e_level0_row8" class="row_heading level0 row8" >BR</th>
+      <td id="T_41d3e_row8_col0" class="data row8 col0" >97.1</td>
+      <td id="T_41d3e_row8_col1" class="data row8 col1" >11.6</td>
+      <td id="T_41d3e_row8_col2" class="data row8 col2" >10.1</td>
+      <td id="T_41d3e_row8_col3" class="data row8 col3" >-14.5</td>
+      <td id="T_41d3e_row8_col4" class="data row8 col4" >+1.98%</td>
+      <td id="T_41d3e_row8_col5" class="data row8 col5" >-4.00%</td>
+      <td id="T_41d3e_row8_col6" class="data row8 col6" >能源化工</td>
+      <td id="T_41d3e_row8_col7" class="data row8 col7" >-42,374 万</td>
+    </tr>
+    <tr>
+      <th id="T_41d3e_level0_row9" class="row_heading level0 row9" >EG</th>
+      <td id="T_41d3e_row9_col0" class="data row9 col0" >34.8</td>
+      <td id="T_41d3e_row9_col1" class="data row9 col1" >13.0</td>
+      <td id="T_41d3e_row9_col2" class="data row9 col2" >33.3</td>
+      <td id="T_41d3e_row9_col3" class="data row9 col3" >-10.1</td>
+      <td id="T_41d3e_row9_col4" class="data row9 col4" >-0.78%</td>
+      <td id="T_41d3e_row9_col5" class="data row9 col5" >-3.99%</td>
+      <td id="T_41d3e_row9_col6" class="data row9 col6" >能源化工</td>
+      <td id="T_41d3e_row9_col7" class="data row9 col7" >-33,926 万</td>
+    </tr>
+  </tbody>
+</table>
+
+        </div>
+        
+        <h2>📂 今日最强势前三大板块深度复盘 (按板块 RPS_5 排序)</h2>
+        
+        <div class="sector-card">
+            <h3>📂 新能源 板块明细 (今日净资金流: -7.44 亿, 板块RPS_5: 100.0)</h3>
+            <div class="table-container">
+                <style type="text/css">
+</style>
+<table id="T_1ae45" class="data-table">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_1ae45_level0_col0" class="col_heading level0 col0" >RPS_1</th>
+      <th id="T_1ae45_level0_col1" class="col_heading level0 col1" >RPS_5</th>
+      <th id="T_1ae45_level0_col2" class="col_heading level0 col2" >RPS_20</th>
+      <th id="T_1ae45_level0_col3" class="col_heading level0 col3" >RPS_5_Change_10d</th>
+      <th id="T_1ae45_level0_col4" class="col_heading level0 col4" >Return_1</th>
+      <th id="T_1ae45_level0_col5" class="col_heading level0 col5" >Return_5</th>
+      <th id="T_1ae45_level0_col6" class="col_heading level0 col6" >capital_flow</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >symbol</th>
+      <th class="blank col0" >&nbsp;</th>
+      <th class="blank col1" >&nbsp;</th>
+      <th class="blank col2" >&nbsp;</th>
+      <th class="blank col3" >&nbsp;</th>
+      <th class="blank col4" >&nbsp;</th>
+      <th class="blank col5" >&nbsp;</th>
+      <th class="blank col6" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_1ae45_level0_row0" class="row_heading level0 row0" >LC</th>
+      <td id="T_1ae45_row0_col0" class="data row0 col0" >100.0</td>
+      <td id="T_1ae45_row0_col1" class="data row0 col1" >98.6</td>
+      <td id="T_1ae45_row0_col2" class="data row0 col2" >36.2</td>
+      <td id="T_1ae45_row0_col3" class="data row0 col3" >+1.4</td>
+      <td id="T_1ae45_row0_col4" class="data row0 col4" >+6.13%</td>
+      <td id="T_1ae45_row0_col5" class="data row0 col5" >+3.91%</td>
+      <td id="T_1ae45_row0_col6" class="data row0 col6" >-190,836 万</td>
+    </tr>
+    <tr>
+      <th id="T_1ae45_level0_row1" class="row_heading level0 row1" >PS</th>
+      <td id="T_1ae45_row1_col0" class="data row1 col0" >78.3</td>
+      <td id="T_1ae45_row1_col1" class="data row1 col1" >40.6</td>
+      <td id="T_1ae45_row1_col2" class="data row1 col2" >43.5</td>
+      <td id="T_1ae45_row1_col3" class="data row1 col3" >-58.0</td>
+      <td id="T_1ae45_row1_col4" class="data row1 col4" >+0.31%</td>
+      <td id="T_1ae45_row1_col5" class="data row1 col5" >-1.33%</td>
+      <td id="T_1ae45_row1_col6" class="data row1 col6" >8,256 万</td>
+    </tr>
+    <tr>
+      <th id="T_1ae45_level0_row2" class="row_heading level0 row2" >SI</th>
+      <td id="T_1ae45_row2_col0" class="data row2 col0" >43.5</td>
+      <td id="T_1ae45_row2_col1" class="data row2 col1" >37.7</td>
+      <td id="T_1ae45_row2_col2" class="data row2 col2" >56.5</td>
+      <td id="T_1ae45_row2_col3" class="data row2 col3" >-15.9</td>
+      <td id="T_1ae45_row2_col4" class="data row2 col4" >-0.36%</td>
+      <td id="T_1ae45_row2_col5" class="data row2 col5" >-1.41%</td>
+      <td id="T_1ae45_row2_col6" class="data row2 col6" >31,347 万</td>
     </tr>
   </tbody>
 </table>
@@ -213,250 +729,280 @@
             </div>
         </div>
         
-        <h2>📈 各大板块强弱与 10 日资金流占比</h2>
-        <style type="text/css">
+        <div class="sector-card">
+            <h3>📂 农产品 板块明细 (今日净资金流: 0.57 亿, 板块RPS_5: 85.7)</h3>
+            <div class="table-container">
+                <style type="text/css">
 </style>
-<table id="T_4b0d8" class="data-table">
+<table id="T_8cf92" class="data-table">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_4b0d8_level0_col0" class="col_heading level0 col0" >sector</th>
-      <th id="T_4b0d8_level0_col1" class="col_heading level0 col1" >RPS_20</th>
-      <th id="T_4b0d8_level0_col2" class="col_heading level0 col2" >RPS_Change_10d</th>
-      <th id="T_4b0d8_level0_col3" class="col_heading level0 col3" >capital_flow</th>
-      <th id="T_4b0d8_level0_col4" class="col_heading level0 col4" >flow_ratio_10d</th>
+      <th id="T_8cf92_level0_col0" class="col_heading level0 col0" >RPS_1</th>
+      <th id="T_8cf92_level0_col1" class="col_heading level0 col1" >RPS_5</th>
+      <th id="T_8cf92_level0_col2" class="col_heading level0 col2" >RPS_20</th>
+      <th id="T_8cf92_level0_col3" class="col_heading level0 col3" >RPS_5_Change_10d</th>
+      <th id="T_8cf92_level0_col4" class="col_heading level0 col4" >Return_1</th>
+      <th id="T_8cf92_level0_col5" class="col_heading level0 col5" >Return_5</th>
+      <th id="T_8cf92_level0_col6" class="col_heading level0 col6" >capital_flow</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >symbol</th>
+      <th class="blank col0" >&nbsp;</th>
+      <th class="blank col1" >&nbsp;</th>
+      <th class="blank col2" >&nbsp;</th>
+      <th class="blank col3" >&nbsp;</th>
+      <th class="blank col4" >&nbsp;</th>
+      <th class="blank col5" >&nbsp;</th>
+      <th class="blank col6" >&nbsp;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_4b0d8_level0_row0" class="row_heading level0 row0" >0</th>
-      <td id="T_4b0d8_row0_col0" class="data row0 col0" >油脂油料</td>
-      <td id="T_4b0d8_row0_col1" class="data row0 col1" >100.0</td>
-      <td id="T_4b0d8_row0_col2" class="data row0 col2" >+57.1</td>
-      <td id="T_4b0d8_row0_col3" class="data row0 col3" >-26,618,276,770</td>
-      <td id="T_4b0d8_row0_col4" class="data row0 col4" >-20.92%</td>
+      <th id="T_8cf92_level0_row0" class="row_heading level0 row0" >LH</th>
+      <td id="T_8cf92_row0_col0" class="data row0 col0" >23.2</td>
+      <td id="T_8cf92_row0_col1" class="data row0 col1" >100.0</td>
+      <td id="T_8cf92_row0_col2" class="data row0 col2" >92.8</td>
+      <td id="T_8cf92_row0_col3" class="data row0 col3" >+10.1</td>
+      <td id="T_8cf92_row0_col4" class="data row0 col4" >-0.97%</td>
+      <td id="T_8cf92_row0_col5" class="data row0 col5" >+4.73%</td>
+      <td id="T_8cf92_row0_col6" class="data row0 col6" >-27,328 万</td>
     </tr>
     <tr>
-      <th id="T_4b0d8_level0_row1" class="row_heading level0 row1" >1</th>
-      <td id="T_4b0d8_row1_col0" class="data row1 col0" >农产品</td>
-      <td id="T_4b0d8_row1_col1" class="data row1 col1" >85.7</td>
-      <td id="T_4b0d8_row1_col2" class="data row1 col2" >+0.0</td>
-      <td id="T_4b0d8_row1_col3" class="data row1 col3" >57,084,330</td>
-      <td id="T_4b0d8_row1_col4" class="data row1 col4" >0.04%</td>
+      <th id="T_8cf92_level0_row1" class="row_heading level0 row1" >JD</th>
+      <td id="T_8cf92_row1_col0" class="data row1 col0" >92.8</td>
+      <td id="T_8cf92_row1_col1" class="data row1 col1" >94.2</td>
+      <td id="T_8cf92_row1_col2" class="data row1 col2" >40.6</td>
+      <td id="T_8cf92_row1_col3" class="data row1 col3" >+11.6</td>
+      <td id="T_8cf92_row1_col4" class="data row1 col4" >+1.45%</td>
+      <td id="T_8cf92_row1_col5" class="data row1 col5" >+2.44%</td>
+      <td id="T_8cf92_row1_col6" class="data row1 col6" >-36,839 万</td>
     </tr>
     <tr>
-      <th id="T_4b0d8_level0_row2" class="row_heading level0 row2" >2</th>
-      <td id="T_4b0d8_row2_col0" class="data row2 col0" >有色金属</td>
-      <td id="T_4b0d8_row2_col1" class="data row2 col1" >71.4</td>
-      <td id="T_4b0d8_row2_col2" class="data row2 col2" >+0.0</td>
-      <td id="T_4b0d8_row2_col3" class="data row2 col3" >25,678,227,780</td>
-      <td id="T_4b0d8_row2_col4" class="data row2 col4" >20.18%</td>
+      <th id="T_8cf92_level0_row2" class="row_heading level0 row2" >AP</th>
+      <td id="T_8cf92_row2_col0" class="data row2 col0" >84.1</td>
+      <td id="T_8cf92_row2_col1" class="data row2 col1" >91.3</td>
+      <td id="T_8cf92_row2_col2" class="data row2 col2" >97.1</td>
+      <td id="T_8cf92_row2_col3" class="data row2 col3" >+4.3</td>
+      <td id="T_8cf92_row2_col4" class="data row2 col4" >+0.68%</td>
+      <td id="T_8cf92_row2_col5" class="data row2 col5" >+1.98%</td>
+      <td id="T_8cf92_row2_col6" class="data row2 col6" >29,069 万</td>
     </tr>
     <tr>
-      <th id="T_4b0d8_level0_row3" class="row_heading level0 row3" >3</th>
-      <td id="T_4b0d8_row3_col0" class="data row3 col0" >黑色建材</td>
-      <td id="T_4b0d8_row3_col1" class="data row3 col1" >57.1</td>
-      <td id="T_4b0d8_row3_col2" class="data row3 col2" >+0.0</td>
-      <td id="T_4b0d8_row3_col3" class="data row3 col3" >20,308,356,830</td>
-      <td id="T_4b0d8_row3_col4" class="data row3 col4" >15.96%</td>
+      <th id="T_8cf92_level0_row3" class="row_heading level0 row3" >CS</th>
+      <td id="T_8cf92_row3_col0" class="data row3 col0" >59.4</td>
+      <td id="T_8cf92_row3_col1" class="data row3 col1" >88.4</td>
+      <td id="T_8cf92_row3_col2" class="data row3 col2" >94.2</td>
+      <td id="T_8cf92_row3_col3" class="data row3 col3" >+50.7</td>
+      <td id="T_8cf92_row3_col4" class="data row3 col4" >-0.11%</td>
+      <td id="T_8cf92_row3_col5" class="data row3 col5" >+1.63%</td>
+      <td id="T_8cf92_row3_col6" class="data row3 col6" >49,703 万</td>
     </tr>
     <tr>
-      <th id="T_4b0d8_level0_row4" class="row_heading level0 row4" >4</th>
-      <td id="T_4b0d8_row4_col0" class="data row4 col0" >航运轻工</td>
-      <td id="T_4b0d8_row4_col1" class="data row4 col1" >42.9</td>
-      <td id="T_4b0d8_row4_col2" class="data row4 col2" >-57.1</td>
-      <td id="T_4b0d8_row4_col3" class="data row4 col3" >114,482,340</td>
-      <td id="T_4b0d8_row4_col4" class="data row4 col4" >0.09%</td>
+      <th id="T_8cf92_level0_row4" class="row_heading level0 row4" >CJ</th>
+      <td id="T_8cf92_row4_col0" class="data row4 col0" >95.7</td>
+      <td id="T_8cf92_row4_col1" class="data row4 col1" >87.0</td>
+      <td id="T_8cf92_row4_col2" class="data row4 col2" >34.8</td>
+      <td id="T_8cf92_row4_col3" class="data row4 col3" >+50.7</td>
+      <td id="T_8cf92_row4_col4" class="data row4 col4" >+1.57%</td>
+      <td id="T_8cf92_row4_col5" class="data row4 col5" >+1.63%</td>
+      <td id="T_8cf92_row4_col6" class="data row4 col6" >-36,409 万</td>
     </tr>
     <tr>
-      <th id="T_4b0d8_level0_row5" class="row_heading level0 row5" >5</th>
-      <td id="T_4b0d8_row5_col0" class="data row5 col0" >新能源</td>
-      <td id="T_4b0d8_row5_col1" class="data row5 col1" >28.6</td>
-      <td id="T_4b0d8_row5_col2" class="data row5 col2" >+0.0</td>
-      <td id="T_4b0d8_row5_col3" class="data row5 col3" >-744,445,525</td>
-      <td id="T_4b0d8_row5_col4" class="data row5 col4" >-0.59%</td>
+      <th id="T_8cf92_level0_row5" class="row_heading level0 row5" >CY</th>
+      <td id="T_8cf92_row5_col0" class="data row5 col0" >75.4</td>
+      <td id="T_8cf92_row5_col1" class="data row5 col1" >85.5</td>
+      <td id="T_8cf92_row5_col2" class="data row5 col2" >88.4</td>
+      <td id="T_8cf92_row5_col3" class="data row5 col3" >+37.7</td>
+      <td id="T_8cf92_row5_col4" class="data row5 col4" >+0.22%</td>
+      <td id="T_8cf92_row5_col5" class="data row5 col5" >+1.34%</td>
+      <td id="T_8cf92_row5_col6" class="data row5 col6" >565 万</td>
     </tr>
     <tr>
-      <th id="T_4b0d8_level0_row6" class="row_heading level0 row6" >6</th>
-      <td id="T_4b0d8_row6_col0" class="data row6 col0" >贵金属</td>
-      <td id="T_4b0d8_row6_col1" class="data row6 col1" >14.3</td>
-      <td id="T_4b0d8_row6_col2" class="data row6 col2" >+0.0</td>
-      <td id="T_4b0d8_row6_col3" class="data row6 col3" >-37,572,481,155</td>
-      <td id="T_4b0d8_row6_col4" class="data row6 col4" >-29.53%</td>
+      <th id="T_8cf92_level0_row6" class="row_heading level0 row6" >CF</th>
+      <td id="T_8cf92_row6_col0" class="data row6 col0" >63.8</td>
+      <td id="T_8cf92_row6_col1" class="data row6 col1" >79.7</td>
+      <td id="T_8cf92_row6_col2" class="data row6 col2" >79.7</td>
+      <td id="T_8cf92_row6_col3" class="data row6 col3" >+36.2</td>
+      <td id="T_8cf92_row6_col4" class="data row6 col4" >+0.06%</td>
+      <td id="T_8cf92_row6_col5" class="data row6 col5" >+1.10%</td>
+      <td id="T_8cf92_row6_col6" class="data row6 col6" >9,222 万</td>
     </tr>
     <tr>
-      <th id="T_4b0d8_level0_row7" class="row_heading level0 row7" >7</th>
-      <td id="T_4b0d8_row7_col0" class="data row7 col0" >能源化工</td>
-      <td id="T_4b0d8_row7_col1" class="data row7 col1" >0.0</td>
-      <td id="T_4b0d8_row7_col2" class="data row7 col2" >+0.0</td>
-      <td id="T_4b0d8_row7_col3" class="data row7 col3" >16,126,202,480</td>
-      <td id="T_4b0d8_row7_col4" class="data row7 col4" >12.68%</td>
+      <th id="T_8cf92_level0_row7" class="row_heading level0 row7" >C</th>
+      <td id="T_8cf92_row7_col0" class="data row7 col0" >42.0</td>
+      <td id="T_8cf92_row7_col1" class="data row7 col1" >73.9</td>
+      <td id="T_8cf92_row7_col2" class="data row7 col2" >89.9</td>
+      <td id="T_8cf92_row7_col3" class="data row7 col3" >+29.0</td>
+      <td id="T_8cf92_row7_col4" class="data row7 col4" >-0.39%</td>
+      <td id="T_8cf92_row7_col5" class="data row7 col5" >+0.56%</td>
+      <td id="T_8cf92_row7_col6" class="data row7 col6" >-42,379 万</td>
+    </tr>
+    <tr>
+      <th id="T_8cf92_level0_row8" class="row_heading level0 row8" >SR</th>
+      <td id="T_8cf92_row8_col0" class="data row8 col0" >56.5</td>
+      <td id="T_8cf92_row8_col1" class="data row8 col1" >65.2</td>
+      <td id="T_8cf92_row8_col2" class="data row8 col2" >63.8</td>
+      <td id="T_8cf92_row8_col3" class="data row8 col3" >+15.9</td>
+      <td id="T_8cf92_row8_col4" class="data row8 col4" >-0.19%</td>
+      <td id="T_8cf92_row8_col5" class="data row8 col5" >-0.08%</td>
+      <td id="T_8cf92_row8_col6" class="data row8 col6" >-125,326 万</td>
+    </tr>
+    <tr>
+      <th id="T_8cf92_level0_row9" class="row_heading level0 row9" >RR</th>
+      <td id="T_8cf92_row9_col0" class="data row9 col0" >65.2</td>
+      <td id="T_8cf92_row9_col1" class="data row9 col1" >33.3</td>
+      <td id="T_8cf92_row9_col2" class="data row9 col2" >85.5</td>
+      <td id="T_8cf92_row9_col3" class="data row9 col3" >-17.4</td>
+      <td id="T_8cf92_row9_col4" class="data row9 col4" >+0.09%</td>
+      <td id="T_8cf92_row9_col5" class="data row9 col5" >-2.00%</td>
+      <td id="T_8cf92_row9_col6" class="data row9 col6" >-24,665 万</td>
+    </tr>
+    <tr>
+      <th id="T_8cf92_level0_row10" class="row_heading level0 row10" >RU</th>
+      <td id="T_8cf92_row10_col0" class="data row10 col0" >81.2</td>
+      <td id="T_8cf92_row10_col1" class="data row10 col1" >4.3</td>
+      <td id="T_8cf92_row10_col2" class="data row10 col2" >47.8</td>
+      <td id="T_8cf92_row10_col3" class="data row10 col3" >-69.6</td>
+      <td id="T_8cf92_row10_col4" class="data row10 col4" >+0.54%</td>
+      <td id="T_8cf92_row10_col5" class="data row10 col5" >-5.23%</td>
+      <td id="T_8cf92_row10_col6" class="data row10 col6" >41,854 万</td>
+    </tr>
+    <tr>
+      <th id="T_8cf92_level0_row11" class="row_heading level0 row11" >NR</th>
+      <td id="T_8cf92_row11_col0" class="data row11 col0" >87.0</td>
+      <td id="T_8cf92_row11_col1" class="data row11 col1" >1.4</td>
+      <td id="T_8cf92_row11_col2" class="data row11 col2" >42.0</td>
+      <td id="T_8cf92_row11_col3" class="data row11 col3" >-50.7</td>
+      <td id="T_8cf92_row11_col4" class="data row11 col4" >+0.87%</td>
+      <td id="T_8cf92_row11_col5" class="data row11 col5" >-7.21%</td>
+      <td id="T_8cf92_row11_col6" class="data row11 col6" >74,057 万</td>
     </tr>
   </tbody>
 </table>
 
+            </div>
+        </div>
         
-        <h2>🌡️ 各大板块近 10 个交易日 RPS 变动热力图</h2>
-        <style type="text/css">
-#T_1dc2d_row0_col0, #T_1dc2d_row0_col1, #T_1dc2d_row0_col2, #T_1dc2d_row0_col3, #T_1dc2d_row2_col5, #T_1dc2d_row2_col6, #T_1dc2d_row3_col4, #T_1dc2d_row3_col8, #T_1dc2d_row4_col7, #T_1dc2d_row4_col9 {
-  background-color: #e3f399;
-  color: #000000;
-}
-#T_1dc2d_row0_col4, #T_1dc2d_row0_col5, #T_1dc2d_row0_col6, #T_1dc2d_row1_col0, #T_1dc2d_row1_col1, #T_1dc2d_row1_col7, #T_1dc2d_row1_col8, #T_1dc2d_row1_col9, #T_1dc2d_row2_col3, #T_1dc2d_row4_col2 {
-  background-color: #e34933;
-  color: #f1f1f1;
-}
-#T_1dc2d_row0_col7, #T_1dc2d_row0_col8, #T_1dc2d_row0_col9, #T_1dc2d_row1_col2, #T_1dc2d_row1_col3, #T_1dc2d_row1_col4, #T_1dc2d_row1_col5, #T_1dc2d_row1_col6, #T_1dc2d_row4_col0, #T_1dc2d_row4_col1 {
-  background-color: #a50026;
-  color: #f1f1f1;
-}
-#T_1dc2d_row2_col0, #T_1dc2d_row2_col4, #T_1dc2d_row2_col7, #T_1dc2d_row2_col8, #T_1dc2d_row3_col1, #T_1dc2d_row3_col2, #T_1dc2d_row3_col3, #T_1dc2d_row3_col5, #T_1dc2d_row3_col9, #T_1dc2d_row4_col6 {
-  background-color: #fee999;
-  color: #000000;
-}
-#T_1dc2d_row2_col1, #T_1dc2d_row2_col2, #T_1dc2d_row2_col9, #T_1dc2d_row3_col0, #T_1dc2d_row3_col6, #T_1dc2d_row3_col7, #T_1dc2d_row4_col3, #T_1dc2d_row4_col4, #T_1dc2d_row4_col5, #T_1dc2d_row4_col8 {
-  background-color: #fca55d;
-  color: #000000;
-}
-#T_1dc2d_row5_col0, #T_1dc2d_row5_col1, #T_1dc2d_row5_col5, #T_1dc2d_row5_col6, #T_1dc2d_row5_col8, #T_1dc2d_row5_col9, #T_1dc2d_row6_col2, #T_1dc2d_row6_col3, #T_1dc2d_row6_col7, #T_1dc2d_row7_col4 {
-  background-color: #9dd569;
-  color: #000000;
-}
-#T_1dc2d_row5_col2, #T_1dc2d_row5_col3, #T_1dc2d_row5_col4, #T_1dc2d_row5_col7, #T_1dc2d_row6_col0, #T_1dc2d_row6_col1, #T_1dc2d_row6_col9, #T_1dc2d_row7_col5, #T_1dc2d_row7_col6, #T_1dc2d_row7_col8 {
-  background-color: #39a758;
-  color: #f1f1f1;
-}
-#T_1dc2d_row6_col4, #T_1dc2d_row6_col5, #T_1dc2d_row6_col6, #T_1dc2d_row6_col8, #T_1dc2d_row7_col0, #T_1dc2d_row7_col1, #T_1dc2d_row7_col2, #T_1dc2d_row7_col3, #T_1dc2d_row7_col7, #T_1dc2d_row7_col9 {
-  background-color: #006837;
-  color: #f1f1f1;
-}
+        <div class="sector-card">
+            <h3>📂 油脂油料 板块明细 (今日净资金流: -266.18 亿, 板块RPS_5: 71.4)</h3>
+            <div class="table-container">
+                <style type="text/css">
 </style>
-<table id="T_1dc2d" class="data-table">
+<table id="T_69b27" class="data-table">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_1dc2d_level0_col0" class="col_heading level0 col0" >2026-06-16</th>
-      <th id="T_1dc2d_level0_col1" class="col_heading level0 col1" >2026-06-17</th>
-      <th id="T_1dc2d_level0_col2" class="col_heading level0 col2" >2026-06-18</th>
-      <th id="T_1dc2d_level0_col3" class="col_heading level0 col3" >2026-06-22</th>
-      <th id="T_1dc2d_level0_col4" class="col_heading level0 col4" >2026-06-23</th>
-      <th id="T_1dc2d_level0_col5" class="col_heading level0 col5" >2026-06-24</th>
-      <th id="T_1dc2d_level0_col6" class="col_heading level0 col6" >2026-06-25</th>
-      <th id="T_1dc2d_level0_col7" class="col_heading level0 col7" >2026-06-26</th>
-      <th id="T_1dc2d_level0_col8" class="col_heading level0 col8" >2026-06-29</th>
-      <th id="T_1dc2d_level0_col9" class="col_heading level0 col9" >2026-06-30</th>
+      <th id="T_69b27_level0_col0" class="col_heading level0 col0" >RPS_1</th>
+      <th id="T_69b27_level0_col1" class="col_heading level0 col1" >RPS_5</th>
+      <th id="T_69b27_level0_col2" class="col_heading level0 col2" >RPS_20</th>
+      <th id="T_69b27_level0_col3" class="col_heading level0 col3" >RPS_5_Change_10d</th>
+      <th id="T_69b27_level0_col4" class="col_heading level0 col4" >Return_1</th>
+      <th id="T_69b27_level0_col5" class="col_heading level0 col5" >Return_5</th>
+      <th id="T_69b27_level0_col6" class="col_heading level0 col6" >capital_flow</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >symbol</th>
+      <th class="blank col0" >&nbsp;</th>
+      <th class="blank col1" >&nbsp;</th>
+      <th class="blank col2" >&nbsp;</th>
+      <th class="blank col3" >&nbsp;</th>
+      <th class="blank col4" >&nbsp;</th>
+      <th class="blank col5" >&nbsp;</th>
+      <th class="blank col6" >&nbsp;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_1dc2d_level0_row0" class="row_heading level0 row0" >油脂油料</th>
-      <td id="T_1dc2d_row0_col0" class="data row0 col0" >42.9</td>
-      <td id="T_1dc2d_row0_col1" class="data row0 col1" >42.9</td>
-      <td id="T_1dc2d_row0_col2" class="data row0 col2" >42.9</td>
-      <td id="T_1dc2d_row0_col3" class="data row0 col3" >42.9</td>
-      <td id="T_1dc2d_row0_col4" class="data row0 col4" >85.7</td>
-      <td id="T_1dc2d_row0_col5" class="data row0 col5" >85.7</td>
-      <td id="T_1dc2d_row0_col6" class="data row0 col6" >85.7</td>
-      <td id="T_1dc2d_row0_col7" class="data row0 col7" >100.0</td>
-      <td id="T_1dc2d_row0_col8" class="data row0 col8" >100.0</td>
-      <td id="T_1dc2d_row0_col9" class="data row0 col9" >100.0</td>
+      <th id="T_69b27_level0_row0" class="row_heading level0 row0" >PK</th>
+      <td id="T_69b27_row0_col0" class="data row0 col0" >88.4</td>
+      <td id="T_69b27_row0_col1" class="data row0 col1" >95.7</td>
+      <td id="T_69b27_row0_col2" class="data row0 col2" >98.6</td>
+      <td id="T_69b27_row0_col3" class="data row0 col3" >+39.1</td>
+      <td id="T_69b27_row0_col4" class="data row0 col4" >+0.88%</td>
+      <td id="T_69b27_row0_col5" class="data row0 col5" >+2.60%</td>
+      <td id="T_69b27_row0_col6" class="data row0 col6" >101,337 万</td>
     </tr>
     <tr>
-      <th id="T_1dc2d_level0_row1" class="row_heading level0 row1" >农产品</th>
-      <td id="T_1dc2d_row1_col0" class="data row1 col0" >85.7</td>
-      <td id="T_1dc2d_row1_col1" class="data row1 col1" >85.7</td>
-      <td id="T_1dc2d_row1_col2" class="data row1 col2" >100.0</td>
-      <td id="T_1dc2d_row1_col3" class="data row1 col3" >100.0</td>
-      <td id="T_1dc2d_row1_col4" class="data row1 col4" >100.0</td>
-      <td id="T_1dc2d_row1_col5" class="data row1 col5" >100.0</td>
-      <td id="T_1dc2d_row1_col6" class="data row1 col6" >100.0</td>
-      <td id="T_1dc2d_row1_col7" class="data row1 col7" >85.7</td>
-      <td id="T_1dc2d_row1_col8" class="data row1 col8" >85.7</td>
-      <td id="T_1dc2d_row1_col9" class="data row1 col9" >85.7</td>
+      <th id="T_69b27_level0_row1" class="row_heading level0 row1" >Y</th>
+      <td id="T_69b27_row1_col0" class="data row1 col0" >47.8</td>
+      <td id="T_69b27_row1_col1" class="data row1 col1" >81.2</td>
+      <td id="T_69b27_row1_col2" class="data row1 col2" >75.4</td>
+      <td id="T_69b27_row1_col3" class="data row1 col3" >+39.1</td>
+      <td id="T_69b27_row1_col4" class="data row1 col4" >-0.26%</td>
+      <td id="T_69b27_row1_col5" class="data row1 col5" >+1.13%</td>
+      <td id="T_69b27_row1_col6" class="data row1 col6" >-18,352 万</td>
     </tr>
     <tr>
-      <th id="T_1dc2d_level0_row2" class="row_heading level0 row2" >有色金属</th>
-      <td id="T_1dc2d_row2_col0" class="data row2 col0" >57.1</td>
-      <td id="T_1dc2d_row2_col1" class="data row2 col1" >71.4</td>
-      <td id="T_1dc2d_row2_col2" class="data row2 col2" >71.4</td>
-      <td id="T_1dc2d_row2_col3" class="data row2 col3" >85.7</td>
-      <td id="T_1dc2d_row2_col4" class="data row2 col4" >57.1</td>
-      <td id="T_1dc2d_row2_col5" class="data row2 col5" >42.9</td>
-      <td id="T_1dc2d_row2_col6" class="data row2 col6" >42.9</td>
-      <td id="T_1dc2d_row2_col7" class="data row2 col7" >57.1</td>
-      <td id="T_1dc2d_row2_col8" class="data row2 col8" >57.1</td>
-      <td id="T_1dc2d_row2_col9" class="data row2 col9" >71.4</td>
+      <th id="T_69b27_level0_row2" class="row_heading level0 row2" >B</th>
+      <td id="T_69b27_row2_col0" class="data row2 col0" >29.0</td>
+      <td id="T_69b27_row2_col1" class="data row2 col1" >71.0</td>
+      <td id="T_69b27_row2_col2" class="data row2 col2" >95.7</td>
+      <td id="T_69b27_row2_col3" class="data row2 col3" >+10.1</td>
+      <td id="T_69b27_row2_col4" class="data row2 col4" >-0.83%</td>
+      <td id="T_69b27_row2_col5" class="data row2 col5" >+0.49%</td>
+      <td id="T_69b27_row2_col6" class="data row2 col6" >-44,304 万</td>
     </tr>
     <tr>
-      <th id="T_1dc2d_level0_row3" class="row_heading level0 row3" >黑色建材</th>
-      <td id="T_1dc2d_row3_col0" class="data row3 col0" >71.4</td>
-      <td id="T_1dc2d_row3_col1" class="data row3 col1" >57.1</td>
-      <td id="T_1dc2d_row3_col2" class="data row3 col2" >57.1</td>
-      <td id="T_1dc2d_row3_col3" class="data row3 col3" >57.1</td>
-      <td id="T_1dc2d_row3_col4" class="data row3 col4" >42.9</td>
-      <td id="T_1dc2d_row3_col5" class="data row3 col5" >57.1</td>
-      <td id="T_1dc2d_row3_col6" class="data row3 col6" >71.4</td>
-      <td id="T_1dc2d_row3_col7" class="data row3 col7" >71.4</td>
-      <td id="T_1dc2d_row3_col8" class="data row3 col8" >42.9</td>
-      <td id="T_1dc2d_row3_col9" class="data row3 col9" >57.1</td>
+      <th id="T_69b27_level0_row3" class="row_heading level0 row3" >A</th>
+      <td id="T_69b27_row3_col0" class="data row3 col0" >8.7</td>
+      <td id="T_69b27_row3_col1" class="data row3 col1" >69.6</td>
+      <td id="T_69b27_row3_col2" class="data row3 col2" >91.3</td>
+      <td id="T_69b27_row3_col3" class="data row3 col3" >+14.5</td>
+      <td id="T_69b27_row3_col4" class="data row3 col4" >-1.59%</td>
+      <td id="T_69b27_row3_col5" class="data row3 col5" >+0.38%</td>
+      <td id="T_69b27_row3_col6" class="data row3 col6" >-95,524 万</td>
     </tr>
     <tr>
-      <th id="T_1dc2d_level0_row4" class="row_heading level0 row4" >航运轻工</th>
-      <td id="T_1dc2d_row4_col0" class="data row4 col0" >100.0</td>
-      <td id="T_1dc2d_row4_col1" class="data row4 col1" >100.0</td>
-      <td id="T_1dc2d_row4_col2" class="data row4 col2" >85.7</td>
-      <td id="T_1dc2d_row4_col3" class="data row4 col3" >71.4</td>
-      <td id="T_1dc2d_row4_col4" class="data row4 col4" >71.4</td>
-      <td id="T_1dc2d_row4_col5" class="data row4 col5" >71.4</td>
-      <td id="T_1dc2d_row4_col6" class="data row4 col6" >57.1</td>
-      <td id="T_1dc2d_row4_col7" class="data row4 col7" >42.9</td>
-      <td id="T_1dc2d_row4_col8" class="data row4 col8" >71.4</td>
-      <td id="T_1dc2d_row4_col9" class="data row4 col9" >42.9</td>
+      <th id="T_69b27_level0_row4" class="row_heading level0 row4" >OI</th>
+      <td id="T_69b27_row4_col0" class="data row4 col0" >36.2</td>
+      <td id="T_69b27_row4_col1" class="data row4 col1" >66.7</td>
+      <td id="T_69b27_row4_col2" class="data row4 col2" >71.0</td>
+      <td id="T_69b27_row4_col3" class="data row4 col3" >+33.3</td>
+      <td id="T_69b27_row4_col4" class="data row4 col4" >-0.78%</td>
+      <td id="T_69b27_row4_col5" class="data row4 col5" >+0.11%</td>
+      <td id="T_69b27_row4_col6" class="data row4 col6" >-115,974 万</td>
     </tr>
     <tr>
-      <th id="T_1dc2d_level0_row5" class="row_heading level0 row5" >新能源</th>
-      <td id="T_1dc2d_row5_col0" class="data row5 col0" >28.6</td>
-      <td id="T_1dc2d_row5_col1" class="data row5 col1" >28.6</td>
-      <td id="T_1dc2d_row5_col2" class="data row5 col2" >14.3</td>
-      <td id="T_1dc2d_row5_col3" class="data row5 col3" >14.3</td>
-      <td id="T_1dc2d_row5_col4" class="data row5 col4" >14.3</td>
-      <td id="T_1dc2d_row5_col5" class="data row5 col5" >28.6</td>
-      <td id="T_1dc2d_row5_col6" class="data row5 col6" >28.6</td>
-      <td id="T_1dc2d_row5_col7" class="data row5 col7" >14.3</td>
-      <td id="T_1dc2d_row5_col8" class="data row5 col8" >28.6</td>
-      <td id="T_1dc2d_row5_col9" class="data row5 col9" >28.6</td>
+      <th id="T_69b27_level0_row5" class="row_heading level0 row5" >M</th>
+      <td id="T_69b27_row5_col0" class="data row5 col0" >30.4</td>
+      <td id="T_69b27_row5_col1" class="data row5 col1" >62.3</td>
+      <td id="T_69b27_row5_col2" class="data row5 col2" >78.3</td>
+      <td id="T_69b27_row5_col3" class="data row5 col3" >-14.5</td>
+      <td id="T_69b27_row5_col4" class="data row5 col4" >-0.81%</td>
+      <td id="T_69b27_row5_col5" class="data row5 col5" >-0.14%</td>
+      <td id="T_69b27_row5_col6" class="data row5 col6" >-125,176 万</td>
     </tr>
     <tr>
-      <th id="T_1dc2d_level0_row6" class="row_heading level0 row6" >贵金属</th>
-      <td id="T_1dc2d_row6_col0" class="data row6 col0" >14.3</td>
-      <td id="T_1dc2d_row6_col1" class="data row6 col1" >14.3</td>
-      <td id="T_1dc2d_row6_col2" class="data row6 col2" >28.6</td>
-      <td id="T_1dc2d_row6_col3" class="data row6 col3" >28.6</td>
-      <td id="T_1dc2d_row6_col4" class="data row6 col4" >0.0</td>
-      <td id="T_1dc2d_row6_col5" class="data row6 col5" >0.0</td>
-      <td id="T_1dc2d_row6_col6" class="data row6 col6" >0.0</td>
-      <td id="T_1dc2d_row6_col7" class="data row6 col7" >28.6</td>
-      <td id="T_1dc2d_row6_col8" class="data row6 col8" >0.0</td>
-      <td id="T_1dc2d_row6_col9" class="data row6 col9" >14.3</td>
+      <th id="T_69b27_level0_row6" class="row_heading level0 row6" >P</th>
+      <td id="T_69b27_row6_col0" class="data row6 col0" >20.3</td>
+      <td id="T_69b27_row6_col1" class="data row6 col1" >55.1</td>
+      <td id="T_69b27_row6_col2" class="data row6 col2" >52.2</td>
+      <td id="T_69b27_row6_col3" class="data row6 col3" >+24.6</td>
+      <td id="T_69b27_row6_col4" class="data row6 col4" >-1.14%</td>
+      <td id="T_69b27_row6_col5" class="data row6 col5" >-0.39%</td>
+      <td id="T_69b27_row6_col6" class="data row6 col6" >-23,009 万</td>
     </tr>
     <tr>
-      <th id="T_1dc2d_level0_row7" class="row_heading level0 row7" >能源化工</th>
-      <td id="T_1dc2d_row7_col0" class="data row7 col0" >0.0</td>
-      <td id="T_1dc2d_row7_col1" class="data row7 col1" >0.0</td>
-      <td id="T_1dc2d_row7_col2" class="data row7 col2" >0.0</td>
-      <td id="T_1dc2d_row7_col3" class="data row7 col3" >0.0</td>
-      <td id="T_1dc2d_row7_col4" class="data row7 col4" >28.6</td>
-      <td id="T_1dc2d_row7_col5" class="data row7 col5" >14.3</td>
-      <td id="T_1dc2d_row7_col6" class="data row7 col6" >14.3</td>
-      <td id="T_1dc2d_row7_col7" class="data row7 col7" >0.0</td>
-      <td id="T_1dc2d_row7_col8" class="data row7 col8" >14.3</td>
-      <td id="T_1dc2d_row7_col9" class="data row7 col9" >0.0</td>
+      <th id="T_69b27_level0_row7" class="row_heading level0 row7" >RM</th>
+      <td id="T_69b27_row7_col0" class="data row7 col0" >4.3</td>
+      <td id="T_69b27_row7_col1" class="data row7 col1" >29.0</td>
+      <td id="T_69b27_row7_col2" class="data row7 col2" >62.3</td>
+      <td id="T_69b27_row7_col3" class="data row7 col3" >-40.6</td>
+      <td id="T_69b27_row7_col4" class="data row7 col4" >-2.13%</td>
+      <td id="T_69b27_row7_col5" class="data row7 col5" >-2.43%</td>
+      <td id="T_69b27_row7_col6" class="data row7 col6" >-7,669 万</td>
     </tr>
   </tbody>
 </table>
 
+            </div>
+        </div>
         
-        <p style="margin-top: 50px; font-size: 12px; color: #888;">Report automatically generated by PNL_Engine.</p>
+        
+        <p style="margin-top: 60px; font-size: 13px; color: #7f8c8d; text-align: center; border-top: 1px dashed #ccc; padding-top: 20px;">
+            本报告由商品期货 VaR 头寸资金管理系统定时任务引擎自动生成。仅供量化交易决策参考。
+        </p>
     </body>
     </html>
     
